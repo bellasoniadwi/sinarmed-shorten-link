@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,7 @@ Route::get('/sinarmed', [PublicController::class, 'index'])->name('user.index');
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [HomeController::class, 'home'])->name('home');
+    Route::resource('product', ProductController::class);
 });
 
 
