@@ -36,7 +36,7 @@
                   <i class="ti ti-list-check fs-6"></i>
                   <p class="mb-0 fs-3">My Task</p>
                 </a>
-                <a href="javascript:void(0)" class="btn btn-outline-primary mx-3 mt-2 d-block" id="logoutButton">Logout</a>
+                <a href="javascript:void(0)" class="btn btn-outline-danger mx-3 mt-2 d-block" id="logoutButton">Logout</a>
               </div>
             </div>
           </li>
