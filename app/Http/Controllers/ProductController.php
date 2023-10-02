@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -58,7 +59,8 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $product = Product::find($id);
+        return view('admin.productedit', compact('product'));
     }
 
     /**
@@ -66,7 +68,27 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'nama_produk' => 'required',
+            'link_produk' => 'required',
+        ]);
+
+        $product = Product::where('id', $id)->first();
+        $product->nama_produk = $request->get('nama_produk');
+        $product->link_produk = $request->get('link_produk');
+        //$produk->satuan = $request->get('satuan');
+
+        if ($request->hasFile('gambar_produk')) {
+            if ($product->gambar_produk && file_exists(storage_path('app/public/' . $product->gambar_produk))) {
+                Storage::delete('public/' . $product->gambar_produk);
+            }
+            $image_name = $request->file('gambar_produk')->store('imagesproduk', 'public');
+            $product->gambar_produk = $image_name;
+        }
+        $product->save();
+
+        return redirect()->route('product.index')
+            ->with('success', 'Data Produk Berhasil Diupdate');
     }
 
     /**
