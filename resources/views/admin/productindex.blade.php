@@ -1,11 +1,9 @@
 @extends('adminLayout.main')
 @section('title')
-    Dashboard
+    Data Produk
 @endsection
-@section('product', 'active')
+@section('produk', 'active')
 @section('content')
-    <!--  Row 1 -->
-
     <div class="row">
         <div class="col-lg-12 d-flex align-items-stretch">
             <div class="card w-100">
@@ -13,13 +11,12 @@
                     <div class="navbar navbar-expand-lg navbar-light">
                         <ul class="navbar-nav">
                             <h5 class="card-title fw-semibold">Recent Transactions</h5>
-                          </ul>
-                          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                        </ul>
+                        <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Tambah Produk</a>
-                              
+                                <a href="{{ route('product.create') }}" class="btn btn-primary">Tambah Produk</a>
                             </ul>
-                          </div>
+                        </div>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-nowrap mb-0 align-middle">
