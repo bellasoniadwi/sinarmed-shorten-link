@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Throwable;
 
 class ProductController extends Controller
 {
@@ -41,8 +42,6 @@ class ProductController extends Controller
         $product->gambar_produk = $request->file('gambar_produk')->store('imagesproduk', 'public');
         
         $product->save();
-
-        // Alert::success('Data Produk Berhasil Ditambahkan');
         return redirect()->route('product.index');
     }
 
@@ -96,6 +95,14 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try{
+            Product::find($id)->delete();
+        }catch(Throwable $error){
+            report($error);
+            return to_route(route: 'product.index')->with('warning', 
+            'Mohon Maaf Data Produk Belum Bisa Dihapus. Coba Lagi Nanti.');
+        }
+        return redirect()->route('product.index')
+            -> with('success', 'Data Produk Berhasil Dihapus');
     }
 }

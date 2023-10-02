@@ -62,10 +62,8 @@
                                             </span>
                                         </td>
                                         <td class="border-bottom-0 text-center">
-                                            <a rel="noopener" 
-                                                href="{{ route('product.edit', $p->id) }}"
-                                                aria-label="Edit Product"><svg
-                                                    xmlns="http://www.w3.org/2000/svg"
+                                            <a rel="noopener" href="{{ route('product.edit', $p->id) }}"
+                                                aria-label="Edit Product"><svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-edit-circle" width="24"
                                                     height="24" viewBox="0 0 24 24" stroke-width="2"
                                                     stroke="currentColor" fill="none" stroke-linecap="round"
@@ -77,6 +75,21 @@
                                                     <path d="M16 5l3 3"></path>
                                                     <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
                                                 </svg></a>
+                                                <a href="javascript:void(0)"
+                                                aria-label="Delete Product" class="delete-product"
+                                                data-id="{{ $p->id }}">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash"
+                                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                    stroke="currentColor" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M4 7l16 0"></path>
+                                                    <path d="M10 11l0 6"></path>
+                                                    <path d="M14 11l0 6"></path>
+                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                                </svg>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -87,4 +100,38 @@
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteButtons = document.querySelectorAll('.delete-product');
+    
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+    
+                if (confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+                    fetch(`{{ route('product.destroy', '') }}/${productId}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        }
+                    })
+                    .then(function(response) {
+                        if (response.ok) {
+                            // Refresh halaman setelah menghapus produk
+                            window.location.reload();
+                        } else {
+                            console.error('Gagal menghapus produk');
+                        }
+                    })
+                    .catch(function(error) {
+                        console.error('Terjadi kesalahan:', error);
+                    });
+                }
+            });
+        });
+    });
+</script>
+
 @endsection
