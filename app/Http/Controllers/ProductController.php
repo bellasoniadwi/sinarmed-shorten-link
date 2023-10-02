@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -11,7 +12,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.productindex');
+        $product = Product::all();
+        return view('admin.productindex')->with('product', $product);
     }
 
     /**
@@ -27,7 +29,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_produk' => 'required',
+            'gambar_produk' => 'required',
+            'link_produk' => 'required',
+        ]);
+        $product = new Product();
+        $product->nama_produk = $request->nama_produk;
+        $product->link_produk = $request->link_produk;
+        $product->gambar_produk = $request->file('gambar_produk')->store('imagesproduk', 'public');
+        
+        $product->save();
+
+        // Alert::success('Data Produk Berhasil Ditambahkan');
+        return redirect()->route('product.index');
     }
 
     /**

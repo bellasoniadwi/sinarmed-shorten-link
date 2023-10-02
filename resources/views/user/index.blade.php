@@ -1147,31 +1147,15 @@
             </div>
 
             <div class="mt-24">
-                <div class="dropdown">
-                    <button class="dropdown-btn">Social Media</button>
-                    <div class="dropdown-content">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center"
-                            href="https://www.linkedin.com/in/SamirPaul" data-id="261652" data-type="page_item">
-                            <img class="link-each-image" data-src="{{ asset('styleUser/style/linkedin.png') }}"
-                                alt="LinkedIn @ SamirPaul" />
-                            <span class=" item-title text-center">LinkedIn @ SamirPaul</span>
-                        </a>
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center"
-                            href="https://www.instagram.com/SamirPaulb" data-id="261686" data-type="page_item">
-                            <img class="link-each-image" data-src="{{ asset('styleUser/style/insta.png') }}"
-                                alt="Instagram @ SamirPaulb" />
-                            <span class=" item-title text-center">Instagram @ SamirPaulb</span>
-                        </a>
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center"
-                            href="https://www.facebook.com/SamirPaulb" data-id="261687" data-type="page_item">
-                            <img class="link-each-image" data-src="{{ asset('styleUser/style/fb.png') }}"
-                                alt="Facebook @ SamirPaulb" />
-                            <span class=" item-title text-center">Facebook @ SamirPaulb</span>
-                        </a>
-                    </div>
+
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
+                    <a target="_blank" class="page-item-each py-10 flex-both-center"
+                        href="https://www.kooapp.com/profile/SamirPaul" data-id="262840" data-type="page_item">
+                        <img class="link-each-image" data-src="{{ asset('styleUser/style/koo.png') }}"
+                            alt="KooApp @ SamirPaul" />
+                        <span class=" item-title text-center">KooApp @ SamirPaul</span>
+                    </a>
                 </div>
 
                 <div class="page-item-wrap relative">
@@ -1183,141 +1167,20 @@
                         <span class=" item-title text-center">LinkedIn @ SamirPaul</span>
                     </a>
                 </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.instagram.com/SamirPaulb" data-id="261686" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/insta.png') }}"
-                            alt="Instagram @ SamirPaulb" />
-                        <span class=" item-title text-center">Instagram @ SamirPaulb</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.facebook.com/SamirPaulb" data-id="261687" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/fb.png') }}"
-                            alt="Facebook @ SamirPaulb" />
-                        <span class=" item-title text-center">Facebook @ SamirPaulb</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://twitter.com/SamirPaulb" data-id="261681" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/tw.png') }}"
-                            alt="Twitter @ SamirPaulb" />
-                        <span class=" item-title text-center">Twitter @ SamirPaulb</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://in.pinterest.com/SamirPaulb" data-id="262545" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/pin.png') }}"
-                            alt="Pinterest @ SamirPaulb" />
-                        <span class=" item-title text-center">Pinterest @ SamirPaulb</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.reddit.com/user/SamirPaulb" data-id="261717" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/rd.png') }}"
-                            alt="Reddit @ SamirPaulb" />
-                        <span class=" item-title text-center">Reddit @ SamirPaulb</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://samirpaul1.github.io/" data-id="261771" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/web.png') }}"
-                            alt="Website @ samirpaul1.github.io" />
-                        <span class=" item-title text-center">Website @ samirpaul1.github.io</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://github.com/SamirPaul1" data-id="261685" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/git.png') }}"
-                            alt="GitHub @ SamirPaul1" />
-                        <span class=" item-title text-center">GitHub @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://leetcode.com/samirpaul1" data-id="261701" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/leet.png') }}"
-                            alt="LeetCode @ SamirPaul1" />
-                        <span class=" item-title text-center">LeetCode @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.codechef.com/users/samirpaul1" data-id="261707" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/code.png') }}"
-                            alt="CodeChef @ SamirPaul1" />
-                        <span class=" item-title text-center">CodeChef @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.hackerrank.com/samirpaul1" data-id="261709" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/hack.png') }}"
-                            alt="HackerRank @ SamirPaul1" />
-                        <span class=" item-title text-center">HackerRank @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://auth.geeksforgeeks.org/user/samirpaul1/practice/" data-id="261710"
-                        data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/geek.png') }}"
-                            alt="GeeksforGeeks @ SamirPaul1" />
-                        <span class=" item-title text-center">GeeksforGeeks @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://samirpaul1.medium.com/" data-id="261711" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/med.png') }}"
-                            alt="Medium @ SamirPaul1" />
-                        <span class=" item-title text-center">Medium @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://devfolio.co/@SamirPaul1" data-id="261714" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/dev.png') }}"
-                            alt="Devfolio @ SamirPaul1" />
-                        <span class=" item-title text-center">Devfolio @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://replit.com/@SamirPaul1" data-id="262560" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/rep.png') }}"
-                            alt="Replit @ SamirPaul1" />
-                        <span class=" item-title text-center">Replit @ SamirPaul1</span>
-                    </a>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.kooapp.com/profile/SamirPaul" data-id="262840" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/koo.png') }}"
-                            alt="KooApp @ SamirPaul" />
-                        <span class=" item-title text-center">KooApp @ SamirPaul</span>
-                    </a>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn">Produk Kami</button>
+                    <div class="dropdown-content">
+                        @foreach($product as $p)
+                        <div class="page-item flex-both-center absolute"></div>
+                        <a target="_blank" class="page-item-each py-10 flex-both-center"
+                            href="{{ $p->link_produk }}" data-id="261687" data-type="page_item">
+                            <img class="link-each-image" data-src="{{ asset('storage/' . $p->gambar_produk) }}"
+                                alt="{{ $p->nama_produk }}" />
+                            <span class=" item-title text-center">{{ $p->nama_produk }}</span>
+                        </a>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
