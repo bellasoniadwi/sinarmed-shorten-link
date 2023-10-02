@@ -14,12 +14,7 @@
                         </ul>
                         <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-<<<<<<< HEAD
-                                <a href="{{ route('product.create') }}" class="btn btn-primary">Tambah Produk</a>
-=======
-                              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-danger">Tambah Produk</a>
-                              
->>>>>>> c1eea43f3d436737b8a933f5003002d783920537
+                                <a href="{{ route('product.create') }}" class="btn btn-danger">Tambah Produk</a>
                             </ul>
                         </div>
                     </div>

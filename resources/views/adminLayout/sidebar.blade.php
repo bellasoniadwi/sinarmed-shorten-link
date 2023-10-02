@@ -29,7 +29,7 @@
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">UI COMPONENTS</span>
           </li>
-          <li class="sidebar-item @yield('product')">
+          <li class="sidebar-item @yield('produk')">
             <a class="sidebar-link" href="{{route('product.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-article"></i>
