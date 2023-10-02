@@ -16499,7 +16499,7 @@ fieldset:disabled .btn {
     transition: 0.2s ease-in;
     height: 100%;
     z-index: 11;
-    border-right: 1px solid rgb(229, 234, 239);
+    border-right: 1px solid rgb(239, 229, 229);
 }
 .left-sidebar .scroll-sidebar {
     overflow-y: auto;
@@ -16523,7 +16523,7 @@ fieldset:disabled .btn {
 }
 .nav-small-cap {
     margin-top: 24px;
-    color: #2a3547;
+    color: #472a2a;
     font-size: 12px;
     font-weight: 700;
     padding: 3px 12px;
@@ -16534,7 +16534,7 @@ fieldset:disabled .btn {
     display: none;
 }
 .sidebar-nav ul .sidebar-item .sidebar-link {
-    color: #2a3547;
+    color: #472a2a;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16562,11 +16562,11 @@ fieldset:disabled .btn {
     font-size: 21px;
 }
 .sidebar-nav ul .sidebar-item .sidebar-link:hover {
-    background-color: rgba(93, 135, 255, 0.1);
-    color: #5d87ff;
+    background-color: rgba(255, 93, 93, 0.1);
+    color: #ff5d5d;
 }
 .sidebar-nav ul .sidebar-item .sidebar-link:hover.has-arrow:after {
-    border-color: #5d87ff;
+    border-color: #ff5d5d;
 }
 .sidebar-nav ul .sidebar-item .sidebar-link.active:hover.has-arrow:after {
     border-color: #fff;
@@ -16581,7 +16581,7 @@ fieldset:disabled .btn {
 }
 .sidebar-nav ul .sidebar-item .first-level .sidebar-item .sidebar-link:hover {
     background-color: transparent;
-    color: #5d87ff;
+    color: #ff5d5d;
 }
 .sidebar-nav
     ul
@@ -16589,7 +16589,7 @@ fieldset:disabled .btn {
     .first-level
     .sidebar-item
     .sidebar-link.active.has-arrow:after {
-    border-color: #5d87ff;
+    border-color: #ff5d5d;
 }
 .sidebar-nav ul .sidebar-item .first-level .sidebar-item > .sidebar-link {
     padding: 8px 10px;
@@ -16630,7 +16630,7 @@ fieldset:disabled .btn {
 .sidebar-nav ul .sidebar-item.selected > .sidebar-link,
 .sidebar-nav ul .sidebar-item.selected > .sidebar-link.active,
 .sidebar-nav ul .sidebar-item > .sidebar-link.active {
-    background-color: #5d87ff;
+    background-color: #ff5d5d;
     color: #fff;
 }
 .sidebar-nav .sidebar-list .sidebar-list-item {
@@ -16649,7 +16649,7 @@ fieldset:disabled .btn {
     height: 7px;
     border-width: 1px 0 0 1px;
     border-style: solid;
-    border-color: #2a3547;
+    border-color: #472a2a;
     margin-left: 10px;
     -webkit-transform: rotate(135deg) translate(0, -50%);
     transform: rotate(135deg) translate(0, -50%);
@@ -16712,7 +16712,7 @@ fieldset:disabled .btn {
 .app-header .navbar .navbar-nav.quick-links .nav-item:hover .nav-link {
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
-    color: #5d87ff !important;
+    color: #ff5d5d !important;
 }
 .app-header .navbar .navbar-nav.quick-links .nav-item:hover .nav-link:before {
     content: "";
@@ -16722,7 +16722,7 @@ fieldset:disabled .btn {
     height: 36px;
     width: 100%;
     border-radius: 7px;
-    background: #ecf2ff;
+    background: #ffecec;
     z-index: -1;
 }
 .nav-icon-hover {
