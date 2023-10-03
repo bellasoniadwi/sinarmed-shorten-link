@@ -16,10 +16,10 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/SamirPaulb/assets/main/samir.webp" />
     <meta property="profile:username" content="samirpaul" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Sinarmed | Linktree" />
+    <meta name="twitter:title" content="Sinarmed || Linktree" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/SamirPaulb/assets/main/samir.webp" />
     <meta name="twitter:url" content="https://samirpaul1.github.io/links" />
-    <title>Sinarmed | Linktree</title>
+    <title>Sinarmed || Linktree</title>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('styleUser/style/sinarmed.png') }}">
     <link rel="manifest" href="{{ asset('styleUser/style/manifest.json') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -1217,7 +1217,7 @@
                         href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840"
                         data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
-                            alt="KooApp @ SamirPaul" />
+                            alt="Whatsapp Sinarmed" />
                         <span class=" item-title text-center">WHATSAPP</span>
                     </a>
                 </div>
@@ -1227,13 +1227,15 @@
                     <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.sinarmed.com/"
                         data-id="261652" data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
-                            alt="LinkedIn @ SamirPaul" />
+                            alt="Website Sinarmed" />
                         <span class=" item-title text-center">SINARMED</span>
                     </a>
                 </div>
 
                 <div class="dropdown">
                     <button class="dropdown-btn">EKATALOG</button>
+                    <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
+                            alt="Katalog Sinarmed" />
                     <div class="dropdown-content">
                         @foreach ($product as $p)
                                 <div class="page-item flex-both-center absolute"></div>
