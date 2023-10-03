@@ -96,14 +96,8 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        try{
-            Product::find($id)->delete();
-        }catch(Throwable $error){
-            report($error);
-            return to_route(route: 'product.index')->with('warning', 
-            'Mohon Maaf Data Produk Belum Bisa Dihapus. Coba Lagi Nanti.');
-        }
-        return redirect()->route('product.index')
-            -> with('success', 'Data Produk Berhasil Dihapus');
+        Product::find($id)->delete();
+        Alert::success('Data Produk berhasil dihapus');
+        return redirect()->route('product.index');
     }
 }
