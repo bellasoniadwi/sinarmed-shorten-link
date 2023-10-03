@@ -923,9 +923,57 @@
                 width: 90%
             }
         }
+
+        @media (max-width: 768px) {
+            .page-item-wrap {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .page-item-each {
+                width: 100%;
+                text-align: center;
+            }
+
+            .link-each-image {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dropdown {
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                width: 100%;
+            }
+
+            .page-item-each {
+                width: 100%;
+                text-align: center;
+            }
+
+            .link-each-image {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-item-wrap,
+            .page-item {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
     </style>
-
-
+    
     <style>
         .page-image {
             object-position: center;
@@ -1019,14 +1067,12 @@
         }
 
         .dropdown {
-            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
-            position: relative;
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s position: relative;
             display: inline-block;
         }
 
         .dropdown-btn {
-            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
-            background-color: #ffffff;
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s background-color: #ffffff;
             color: #1F365C;
             padding: 10px 20px;
             border: none;
@@ -1040,34 +1086,48 @@
         }
 
         .dropdown-content {
-            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
-            border-radius: 6px;
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s background-color: #ffffff;
+            width: 680px;
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 680px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
         }
 
         @media (max-width:768px) {
             .dropdown-btn {
-                width: 559px;
+                width: 100%;
+            }
+
+            .dropdown-content {
+                width: 100%;
             }
         }
 
         @media (max-width:480px) {
             .dropdown-btn {
-                width: 431px;
+                width: 100%;
+            }
+
+            .dropdown-content {
+                width: 100%;
             }
         }
 
         @media (max-width:400px) {
             .dropdown-btn {
-                width: 359px;
+                width: 100%;
+            }
+
+            .dropdown-content {
+                width: 100%;
             }
         }
-
     </style>
     <style>
     </style>
@@ -1154,7 +1214,8 @@
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
                     <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840" data-type="page_item">
+                        href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840"
+                        data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
                             alt="KooApp @ SamirPaul" />
                         <span class=" item-title text-center">WHATSAPP</span>
@@ -1163,8 +1224,8 @@
 
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.sinarmed.com/" data-id="261652" data-type="page_item">
+                    <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.sinarmed.com/"
+                        data-id="261652" data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
                             alt="LinkedIn @ SamirPaul" />
                         <span class=" item-title text-center">SINARMED</span>
@@ -1174,17 +1235,18 @@
                 <div class="dropdown">
                     <button class="dropdown-btn">EKATALOG</button>
                     <div class="dropdown-content">
-                        @foreach($product as $p)
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center"
-                            href="{{ $p->link_produk }}" data-id="261687" data-type="page_item">
-                            <img class="link-each-image" data-src="{{ asset('storage/' . $p->gambar_produk) }}"
-                                alt="{{ $p->nama_produk }}" />
-                            <span class=" item-title text-center">{{ $p->nama_produk }}</span>
-                        </a>
+                        @foreach ($product as $p)
+                                <div class="page-item flex-both-center absolute"></div>
+                                <a target="_blank" class="page-item-each py-10 flex-both-center" href="{{ $p->link_produk }}"
+                                    data-id="261652" data-type="page_item">
+                                    <img class="link-each-image" data-src="{{ asset('storage/' . $p->gambar_produk) }}"
+                                        alt="{{ $p->nama_produk }}" />
+                                    <span class=" item-title text-center">{{ $p->nama_produk }}</span>
+                                </a>
                         @endforeach
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
