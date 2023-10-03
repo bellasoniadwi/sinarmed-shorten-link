@@ -56,7 +56,7 @@
                                                 $nama = $p->nama_produk;
                                                 $namaChunks = str_split($nama, 60);
                                             @endphp
-                                            @foreach($namaChunks as $chunk)
+                                            @foreach ($namaChunks as $chunk)
                                                 {{ $chunk }}<br>
                                             @endforeach
                                         </td>
@@ -81,13 +81,12 @@
                                                     <path d="M16 5l3 3"></path>
                                                     <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
                                                 </svg></a>
-                                                <a href="javascript:void(0)"
-                                                aria-label="Delete Product" class="delete-product"
+                                            <a href="" aria-label="Delete Product" class="delete-product"
                                                 data-id="{{ $p->id }}">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash"
-                                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-trash" width="24" height="24"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                     <path d="M4 7l16 0"></path>
                                                     <path d="M10 11l0 6"></path>
@@ -108,37 +107,37 @@
     </div>
 @endsection
 @section('js')
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        const deleteButtons = document.querySelectorAll('.delete-product');
-    
-        deleteButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const productId = this.getAttribute('data-id');
-    
-                if (confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
-                    fetch(`{{ route('product.destroy', '') }}/${productId}`, {
-                        method: 'DELETE',
-                        headers: {
-                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                        }
-                    })
-                    .then(function(response) {
-                        if (response.ok) {
-                            // Refresh halaman setelah menghapus produk
-                            window.location.reload();
-                        } else {
-                            console.error('Gagal menghapus produk');
-                        }
-                    })
-                    .catch(function(error) {
-                        console.error('Terjadi kesalahan:', error);
-                    });
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            const deleteButtons = document.querySelectorAll('.delete-product');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-id');
+
+                    if (confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+                        fetch(`{{ route('product.destroy', '') }}/${productId}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                                }
+                            })
+                            .then(function(response) {
+                                if (response.ok) {
+                                    // Refresh halaman setelah menghapus produk
+                                    window.location.reload();
+                                } else {
+                                    console.error('Gagal menghapus produk');
+                                }
+                            })
+                            .catch(function(error) {
+                                console.error('Terjadi kesalahan:', error);
+                            });
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
 @endsection
