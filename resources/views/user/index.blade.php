@@ -327,7 +327,7 @@
         }
 
         .page-item-wrap {
-            transition: transform .15s cubic-bezier(.17, .67, .29, 2.71) 0s
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
         }
 
         .page-item-wrap.show-embed {
@@ -1019,11 +1019,13 @@
         }
 
         .dropdown {
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
             position: relative;
             display: inline-block;
         }
 
         .dropdown-btn {
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
             background-color: #ffffff;
             color: #1F365C;
             padding: 10px 20px;
@@ -1038,6 +1040,7 @@
         }
 
         .dropdown-content {
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
             border-radius: 6px;
             display: none;
             position: absolute;
@@ -1151,25 +1154,25 @@
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
                     <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.kooapp.com/profile/SamirPaul" data-id="262840" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/koo.png') }}"
+                        href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840" data-type="page_item">
+                        <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
                             alt="KooApp @ SamirPaul" />
-                        <span class=" item-title text-center">KooApp @ SamirPaul</span>
+                        <span class=" item-title text-center">WHATSAPP</span>
                     </a>
                 </div>
 
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
                     <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://www.linkedin.com/in/SamirPaul" data-id="261652" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/linkedin.png') }}"
+                        href="https://www.sinarmed.com/" data-id="261652" data-type="page_item">
+                        <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
                             alt="LinkedIn @ SamirPaul" />
-                        <span class=" item-title text-center">LinkedIn @ SamirPaul</span>
+                        <span class=" item-title text-center">SINARMED</span>
                     </a>
                 </div>
 
                 <div class="dropdown">
-                    <button class="dropdown-btn">Produk Kami</button>
+                    <button class="dropdown-btn">EKATALOG</button>
                     <div class="dropdown-content">
                         @foreach($product as $p)
                         <div class="page-item flex-both-center absolute"></div>
