@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 use Throwable;
 
 class ProductController extends Controller
@@ -42,6 +43,7 @@ class ProductController extends Controller
         $product->gambar_produk = $request->file('gambar_produk')->store('imagesproduk', 'public');
         
         $product->save();
+        Alert::success('Data Produk berhasil ditambahkan');
         return redirect()->route('product.index');
     }
 
@@ -85,9 +87,8 @@ class ProductController extends Controller
             $product->gambar_produk = $image_name;
         }
         $product->save();
-
-        return redirect()->route('product.index')
-            ->with('success', 'Data Produk Berhasil Diupdate');
+        Alert::success('Data Produk berhasil diubah');
+        return redirect()->route('product.index');
     }
 
     /**

@@ -19,6 +19,7 @@
         @include('adminLayout.header')
       <div class="container-fluid">
         @yield('content')
+        @include('sweetalert::alert')
         @include('adminLayout.footer')
       </div>
     </div>
@@ -32,6 +33,7 @@
   <script src="{{ asset('styleAdmin/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
   <script src="{{ asset('styleAdmin/libs/simplebar/dist/simplebar.js')}}"></script>
   <script src="{{ asset('styleAdmin/js/dashboard.js')}}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

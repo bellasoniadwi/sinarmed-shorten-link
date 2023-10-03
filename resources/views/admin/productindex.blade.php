@@ -125,7 +125,6 @@
                             })
                             .then(function(response) {
                                 if (response.ok) {
-                                    // Refresh halaman setelah menghapus produk
                                     window.location.reload();
                                 } else {
                                     console.error('Gagal menghapus produk');
