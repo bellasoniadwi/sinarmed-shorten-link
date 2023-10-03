@@ -1067,12 +1067,14 @@
         }
 
         .dropdown {
-            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s position: relative;
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
+            position: relative;
             display: inline-block;
         }
 
         .dropdown-btn {
-            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s background-color: #ffffff;
+            transition: transform .15s cubic-bezier(0.17, 0.67, 0.29, 2.71) 0s
+            background-color: #ffffff;
             color: #1F365C;
             padding: 10px 20px;
             border: none;
@@ -1210,27 +1212,27 @@
             </div>
 
             <div class="mt-24">
-
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
                     <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840"
-                        data-type="page_item">
+                        href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840" data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
                             alt="Whatsapp Sinarmed" />
                         <span class=" item-title text-center">WHATSAPP</span>
                     </a>
                 </div>
-
+                
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.sinarmed.com/"
-                        data-id="261652" data-type="page_item">
+                    <a target="_blank" class="page-item-each py-10 flex-both-center"
+                        href="https://www.sinarmed.com/" data-id="261652" data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
                             alt="Website Sinarmed" />
                         <span class=" item-title text-center">SINARMED</span>
                     </a>
                 </div>
+
+                
 
                 <div class="dropdown">
                     <button class="dropdown-btn">EKATALOG</button>
@@ -1248,7 +1250,6 @@
                         @endforeach
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
