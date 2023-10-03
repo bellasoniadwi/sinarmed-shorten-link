@@ -989,6 +989,11 @@
             font-weight: 700;
         }
 
+        .page-subtitle {
+            font-size: 14px;
+            font-weight: 450;
+        }
+
         .page-bioline {
             font-size: 16px;
             font-weight: 600;
@@ -1150,6 +1155,9 @@
             <h2 class="page-title page-text-color page-text-font mt-16 text-center">
                 PT Sinarmed Jaya
             </h2>
+            <h3 class="page-subtitle page-text-color page-text-font mt-16 text-center">
+                Medical Gas System - Engineering - Service
+            </h3>
 
             <div class="flex-both-center flex-wrap mt-24">
                 <div class="page-social relative">
