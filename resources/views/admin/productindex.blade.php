@@ -52,7 +52,13 @@
                                                 alt="{{ $p->nama_produk }}" />
                                         </td>
                                         <td class="border-bottom-0 text-center">
-                                            <h6 class="fw-semibold mb-0 fs-4">{{ $p->nama_produk }}</h6>
+                                            @php
+                                                $nama = $p->nama_produk;
+                                                $namaChunks = str_split($nama, 60);
+                                            @endphp
+                                            @foreach($namaChunks as $chunk)
+                                                {{ $chunk }}<br>
+                                            @endforeach
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <span class="badge bg-success rounded-3 fw-semibold">
@@ -102,7 +108,8 @@
     </div>
 @endsection
 @section('js')
-<script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
         const deleteButtons = document.querySelectorAll('.delete-product');
     
