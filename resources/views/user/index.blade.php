@@ -148,6 +148,7 @@
 
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
+<<<<<<< HEAD
                     <div class="css-x3hr8h">
                         <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;" class="css-1goyi81">
                             <div class="css-139awdm">
@@ -157,28 +158,39 @@
                                         <img visibility="visible" loading="lazy" class="css-1d3ess8 en27bju18">
                                     </picture>
                                     <h2><span class="text-center">PRODUK DALAM NEGERI</span></h2>
+=======
+                        <div class="css-x3hr8h">
+                            <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;" class="css-1goyi81">
+                                <div class="css-139awdm">
+                                    <div color="#FFFFFF" style="border-bottom: 1px solid #b2aeae" class="css-18dalow e1cu2qz1">
+                                        <picture visibility="visible" class="css-18ikrgg en27bju17">
+                                            <source srcset="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/icons/62d65be605b8766aa957eb1b">
+                                            <img visibility="visible" loading="lazy" class="css-1d3ess8 en27bju18">
+                                        </picture>
+                                        <h2><span class="text-center">PRODUK DALAM NEGERI</span></h2>
+                                    </div>
+                        
+                                    {{-- <div color="#FFFFFF" class="css-y4awvf e1cu2qz0">
+                                        <h3>KHUSUS PRODUK AKD</h3>
+                                    </div> --}}
+>>>>>>> 190505124045d4d1844100c8ce42c173d7bfc35f
                                 </div>
-                    
-                                {{-- <div color="#FFFFFF" class="css-y4awvf e1cu2qz0">
-                                    <h3>KHUSUS PRODUK AKD</h3>
-                                </div> --}}
-                            </div>
-                    
-                            <div display="grid" class="css-37t1ki e1axnq4j3">
-                                @foreach ($dalamnegeri as $dn)
-                                    <a href="{{ $dn->link_product }}">
-                                        <div class="css-1fqugoq eayjb5n4">
-                                            <img alt="Medical Gas Alarm System" src="{{ asset('storage/' . $dn->gambar_product) }}">
-                                            <div font-size="14px" class="css-1bmv740 eayjb5n2">
-                                                <span>{{ $dn->nama_product }}</span>
+                        
+                                <div display="grid" class="css-37t1ki e1axnq4j3">
+                                    @foreach ($dalamnegeri as $dn)
+                                        <a href="{{ $dn->link_product }}">
+                                            <div class="css-1fqugoq eayjb5n4">
+                                                <img alt="Medical Gas Alarm System" src="{{ asset('storage/' . $dn->gambar_product) }}">
+                                                <div font-size="14px" class="css-1bmv740 eayjb5n2">
+                                                    <span>{{ $dn->nama_product }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                @endforeach
+                                        </a>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
