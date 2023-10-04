@@ -1239,6 +1239,15 @@
                     </a>
                 </div>
 
+                    <div class="page-item-wrap relative">
+                        <div class="page-item flex-both-center absolute"></div>
+                        <a target="_blank" class="page-item-each py-10 flex-both-center"
+                            href="https://pahsco.co.id/" data-id="262840" data-type="page_item">
+                            <img class="link-each-image" data-src="{{ asset('styleUser/style/pahsco.png') }}"
+                                alt="Pahsco" />
+                            <span class=" item-title text-center">PAHSCO</span>
+                        </a>
+                    </div>
                 
 
                 <div class="dropdown">
