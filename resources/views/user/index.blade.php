@@ -123,26 +123,31 @@
                         <span class="item-title text-center">PAHSCO</span>
                     </a>
                 </div>
-
-
-                <div class="dropdown">
-                    <button class="dropdown-btn">EKATALOG</button>
-                    <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
-                        alt="Katalog Sinarmed" />
-                    <div class="dropdown-content">
-                        @foreach ($ekatalog as $ek)
-                            <div class="page-item flex-both-center absolute"></div>
-                            <a target="_blank" class="page-item-each py-10 flex-both-center"
-                                href="{{ $ek->link_product }}" data-id="261652" data-type="page_item">
-                                <img class="link-each-image" data-src="{{ asset('storage/' . $ek->gambar_product) }}"
-                                    alt="{{ $ek->nama_product }}" />
-                                <span class=" item-title text-center">{{ $ek->nama_product }}</span>
-                            </a>
-                        @endforeach
+                <div class="page-item-wrap relative">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-btn">EKATALOG</button>
+                            <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
+                                alt="Katalog Sinarmed" />
+                            <div class="accordion-content">
+                                @foreach ($ekatalog as $ek)
+                                    <div class="page-item flex-both-center absolute"></div>
+                                    <a target="_blank" class="page-item-each py-10 flex-both-center"
+                                        href="{{ $ek->link_product }}" data-id="261652" data-type="page_item">
+                                        <img class="link-each-image" data-src="{{ asset('storage/' . $ek->gambar_product) }}"
+                                            alt="{{ $ek->nama_product }}" />
+                                        <span class=" item-title text-center">{{ $ek->nama_product }}</span>
+                                    </a>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                            
 
                 <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"></div>
                     <div class="css-x3hr8h">
                         <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;" class="css-1goyi81">
                             <div class="css-139awdm">
@@ -182,6 +187,16 @@
 
 </body>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".accordion-btn").click(function () {
+            $(".accordion-content").slideToggle(); // Toggle the content
+            $(this).toggleClass("active"); // Add or remove "active" class for styling
+        });
+    });
+</script>
+
 <script>
     var plausibleScript = document.createElement("script");
     plausibleScript.src = "{{ asset('styleUser/style/plausible.js') }}"
@@ -189,6 +204,7 @@
     plausibleScript.setAttribute("defer", "");
     plausibleScript.setAttribute("data-domain", "bio.link");
     document.head.appendChild(plausibleScript);
+    
 </script>
 
 
