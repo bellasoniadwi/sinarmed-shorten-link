@@ -2,11 +2,11 @@
 @section('title')
     Edit Product
 @endsection
-@section('produk', 'active')
+@section('product', 'active')
 @section('content')
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Form Edit Produk Sinarmed</h5>
+            <h5 class="card-title fw-semibold mb-4">Form Edit product Sinarmed</h5>
             <div class="card">
                 <div class="card-body">
                     <form class="form-horizontal form-label-left input_mask" method="POST"
@@ -14,17 +14,24 @@
                     @csrf
                     @method('PUT')
                         <div class="mb-3">
-                            <label for="nama" class="form-label">Nama Produk</label>
-                            <input type="text" class="form-control" id="nama_produk" name="nama_produk" required placeholder="Nama Produk" value="{{$product->nama_produk}}">
+                            <label for="nama" class="form-label">Nama product</label>
+                            <input type="text" class="form-control" id="nama_product" name="nama_product" required placeholder="Nama product" value="{{$product->nama_product}}">
                         </div>
                         <div class="mb-3">
-                            <label for="link" class="form-label">Link Produk</label>
-                            <input type="url" class="form-control" id="link_produk" name="link_produk" required placeholder="https://link_produk" value="{{$product->link_produk}}">
+                            <label for="kategori_product" class="form-label">Kategori Product</label>
+                            <select class="form-control" id="kategori_product" name="kategori_product" required>
+                                <option value="E-katalog" @if ($product->kategori_product == "E-katalog") selected @endif>E-katalog</option>
+                                <option value="Dalam Negeri" @if ($product->kategori_product == "Dalam Negeri") selected @endif>Dalam Negeri</option>
+                            </select>
                         </div>
                         <div class="mb-3">
-                            <label for="gambar" class="form-label">Gambar Produk</label>
-                            <input type="file" class="form-control" id="gambar_produk" name="gambar_produk" value="{{old('gambar_produk')}}">
-                            <img width="70px" height="100"src="{{asset('storage/'. $product->gambar_produk)}}" >
+                            <label for="link" class="form-label">Link product</label>
+                            <input type="url" class="form-control" id="link_product" name="link_product" required placeholder="https://link_product" value="{{$product->link_product}}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="gambar" class="form-label">Gambar product</label>
+                            <input type="file" class="form-control" id="gambar_product" name="gambar_product" value="{{old('gambar_product')}}">
+                            <img width="70px" height="100"src="{{asset('storage/'. $product->gambar_product)}}" >
                         </div>
                         {{-- <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">

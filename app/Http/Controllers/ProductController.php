@@ -33,17 +33,19 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_produk' => 'required',
-            'gambar_produk' => 'required',
-            'link_produk' => 'required',
+            'nama_product' => 'required',
+            'gambar_product' => 'required',
+            'link_product' => 'required',
+            'kategori_product' => 'required',
         ]);
         $product = new Product();
-        $product->nama_produk = $request->nama_produk;
-        $product->link_produk = $request->link_produk;
-        $product->gambar_produk = $request->file('gambar_produk')->store('imagesproduk', 'public');
+        $product->nama_product = $request->nama_product;
+        $product->kategori_product = $request->kategori_product;
+        $product->link_product = $request->link_product;
+        $product->gambar_product = $request->file('gambar_product')->store('imagesproduct', 'public');
         
         $product->save();
-        Alert::success('Data Produk berhasil ditambahkan');
+        Alert::success('Data product berhasil ditambahkan');
         return redirect()->route('product.index');
     }
 
@@ -70,24 +72,25 @@ class ProductController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'nama_produk' => 'required',
-            'link_produk' => 'required',
+            'nama_product' => 'required',
+            'link_product' => 'required',
+            'kategori_product' => 'required',
         ]);
 
         $product = Product::where('id', $id)->first();
-        $product->nama_produk = $request->get('nama_produk');
-        $product->link_produk = $request->get('link_produk');
-        //$produk->satuan = $request->get('satuan');
+        $product->nama_product = $request->get('nama_product');
+        $product->kategori_product = $request->get('kategori_product');
+        $product->link_product = $request->get('link_product');
 
-        if ($request->hasFile('gambar_produk')) {
-            if ($product->gambar_produk && file_exists(storage_path('app/public/' . $product->gambar_produk))) {
-                Storage::delete('public/' . $product->gambar_produk);
+        if ($request->hasFile('gambar_product')) {
+            if ($product->gambar_product && file_exists(storage_path('app/public/' . $product->gambar_product))) {
+                Storage::delete('public/' . $product->gambar_product);
             }
-            $image_name = $request->file('gambar_produk')->store('imagesproduk', 'public');
-            $product->gambar_produk = $image_name;
+            $image_name = $request->file('gambar_product')->store('imagesproduct', 'public');
+            $product->gambar_product = $image_name;
         }
         $product->save();
-        Alert::success('Data Produk berhasil diubah');
+        Alert::success('Data product berhasil diubah');
         return redirect()->route('product.index');
     }
 
@@ -97,7 +100,7 @@ class ProductController extends Controller
     public function destroy(string $id)
     {
         Product::find($id)->delete();
-        Alert::success('Data Produk berhasil dihapus');
+        Alert::success('Data product berhasil dihapus');
         return redirect()->route('product.index');
     }
 }

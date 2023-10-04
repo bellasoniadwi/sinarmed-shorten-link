@@ -2,7 +2,7 @@
 @section('title')
     Data Product
 @endsection
-@section('produk', 'active')
+@section('product', 'active')
 @section('content')
     <div class="row">
         <div class="col-lg-12 d-flex align-items-stretch">
@@ -14,7 +14,7 @@
                         </ul>
                         <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                                <a href="{{ route('product.create') }}" class="btn btn-danger">Tambah Produk</a>
+                                <a href="{{ route('product.create') }}" class="btn btn-danger">Tambah Product</a>
                             </ul>
                         </div>
                     </div>
@@ -26,13 +26,16 @@
                                         <h6 class="fw-semibold mb-0">No.</h6>
                                     </th>
                                     <th class="border-bottom-0 text-center">
-                                        <h6 class="fw-semibold mb-0">Gambar Produk</h6>
+                                        <h6 class="fw-semibold mb-0">Gambar Product</h6>
                                     </th>
                                     <th class="border-bottom-0 text-center">
-                                        <h6 class="fw-semibold mb-0">Nama Produk</h6>
+                                        <h6 class="fw-semibold mb-0">Nama Product</h6>
                                     </th>
                                     <th class="border-bottom-0 text-center">
-                                        <h6 class="fw-semibold mb-0">Link Produk</h6>
+                                        <h6 class="fw-semibold mb-0">Kategori Product</h6>
+                                    </th>
+                                    <th class="border-bottom-0 text-center">
+                                        <h6 class="fw-semibold mb-0">Link Product</h6>
                                     </th>
                                     <th class="border-bottom-0 text-center">
                                         <h6 class="fw-semibold mb-0">Aksi</h6>
@@ -48,12 +51,12 @@
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <img height="50px" width="50px"
-                                                src="{{ asset('storage/' . $p->gambar_produk) }}"
-                                                alt="{{ $p->nama_produk }}" />
+                                                src="{{ asset('storage/' . $p->gambar_product) }}"
+                                                alt="{{ $p->nama_product }}" />
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             @php
-                                                $nama = $p->nama_produk;
+                                                $nama = $p->nama_product;
                                                 $namaChunks = str_split($nama, 60);
                                             @endphp
                                             @foreach ($namaChunks as $chunk)
@@ -61,9 +64,12 @@
                                             @endforeach
                                         </td>
                                         <td class="border-bottom-0 text-center">
+                                            {{ $p->kategori_product }}
+                                        </td>
+                                        <td class="border-bottom-0 text-center">
                                             <span class="badge bg-success rounded-3 fw-semibold">
-                                                <a href="{{ $p->link_produk }}" class="text-light font-weight-bold text-xs"
-                                                    data-toggle="tooltip" data-original-title="{{ $p->nama_produk }}"
+                                                <a href="{{ $p->link_product }}" class="text-light font-weight-bold text-xs"
+                                                    data-toggle="tooltip" data-original-title="{{ $p->nama_product }}"
                                                     target="_blank">Buka Link</a>
                                             </span>
                                         </td>
@@ -119,12 +125,12 @@
                     const productId = this.getAttribute('data-id');
 
                     Swal.fire({
-                        title: 'Apakah Anda yakin ingin menghapus produk ini?',
+                        title: 'Apakah Anda yakin ingin menghapus product ini?',
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Ya, hapus produk!'
+                        confirmButtonText: 'Ya, hapus product!'
                     }).then((result) => {
                         if (result.isConfirmed) {
                             fetch(`{{ route('product.destroy', '') }}/${productId}`, {
@@ -137,13 +143,13 @@
                                     if (response.ok) {
                                         Swal.fire({
                                             title: 'Deleted!',
-                                            text: 'Produk berhasil dihapus.',
+                                            text: 'Product berhasil dihapus.',
                                             icon: 'success',
                                             showConfirmButton: false,
                                             timer: 1500
                                         })
                                     } else {
-                                        console.error('Gagal menghapus produk');
+                                        console.error('Gagal menghapus product');
                                     }
                                     window.location.reload();
                                 })
