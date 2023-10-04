@@ -1085,12 +1085,12 @@ html {
 }
 
 .accordion-btn::after {
-    content: "\25B6";
+    content: "\25BC";
     float: right;
 }
 
 .accordion-btn.active::after {
-    content: "\25BC";
+    content: "\25B2";
 }
 
 @media (max-width: 768px) {
