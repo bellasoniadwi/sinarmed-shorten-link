@@ -1067,10 +1067,12 @@ html {
     cursor: pointer;
     width: 680px;
     height: 55px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     border-radius: 6px;
     text-align: center;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .accordion-content {
@@ -1242,6 +1244,39 @@ body {
 }
 
 .css-18dalow h2 {
+    font-size: 18px;
+    color: inherit;
+    margin: 0 0 0 5px;
+    width: 100%;
+    font-weight: 700;
+    padding: 20px 60px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.css-18dalow-p2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0% 0 0 0;
+    width: 100%;
+    position: relative;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 600;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: start;
+    justify-content: start;
+    color: #ffffff;
+    text-align: center;
+    height: 40px;
+}
+
+.css-18dalow-p2 h2 {
     font-size: 18px;
     color: inherit;
     margin: 0 0 0 5px;

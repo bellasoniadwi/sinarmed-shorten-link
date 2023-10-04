@@ -93,16 +93,20 @@
             </div>
 
             <div class="mt-24">
-                <div class="page-item-wrap relative">
+                
+                <div class="page-item-wrap relative ">
                     <div class="page-item flex-both-center absolute"></div>
                     <a target="_blank" class="page-item-each py-10 flex-both-center"
                         href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840"
                         data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
                             alt="Whatsapp Sinarmed" />
-                        <span class=" item-title text-center">WHATSAPP</span>
+                            <div class="css-18dalow-p2">
+                                <h2><span class="text-center">WHATSAPP</span></h2>
+                            </div>
                     </a>
-                </div>
+                
+            </div>
 
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
@@ -110,7 +114,9 @@
                         data-id="261652" data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
                             alt="Website Sinarmed" />
-                        <span class=" item-title text-center">SINARMED</span>
+                            <div class="css-18dalow-p2">
+                                <h2><span class="text-center">SINARMED</span></h2>
+                            </div>
                     </a>
                 </div>
 
@@ -120,7 +126,9 @@
                         data-id="262840" data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleUser/style/pahsco.png') }}"
                             alt="Pahsco" />
-                        <span class="item-title text-center">PAHSCO</span>
+                            <div class="css-18dalow-p2">
+                                <h2><span class="text-center">PAHSCO</span></h2>
+                            </div>
                     </a>
                 </div>
                 <div class="page-item-wrap relative">
