@@ -139,9 +139,70 @@
                         @endforeach
                     </div>
                 </div>
+
+                <div class="page-item-wrap relative">
+                <div class="css-x3hr8h">
+                    <div style="border-radius:30px;border:0.5px solid #FFFFFF" class="css-1goyi81">
+                        <div class="css-139awdm">
+                            <div color="#FFFFFF" style="border-bottom:1px solid #FFFFFF" class="css-18dalow e1cu2qz1">
+                                <picture visibility="visible" class="css-18ikrgg en27bju17">
+                                    <source srcset="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/icons/62d65be605b8766aa957eb1b">
+                                        <img visibility="visible" loading="lazy" class="css-1d3ess8 en27bju18">
+                                </picture>
+                                <h2>PRODUK DALAM NEGERI</h2>
+                            </div>
+                            
+                            <div color="#FFFFFF" class="css-y4awvf e1cu2qz0">
+                                <h3>khusus produk AKD</h3>
+                            </div>
+                        </div>
+                        
+                        <div display="grid" class="css-37t1ki e1axnq4j3">
+                            <a href="https://e-katalog.lkpp.go.id/katalog/produk/detail/1263712?type=general&amp;utm_source=framed&amp;utm_campaign=167656-mezink&amp;utm_medium=affiliate&amp;utm_content=produk-dalam-negeri" target="_blank" rel="noreferrer" class="css-1f4dv5m">
+                                <div class="css-1fqugoq eayjb5n4">
+                                    <img alt="Medical Gas Alarm System" src="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/catalog/productimage_cropper_1658223225006.jpg">
+                                    <div font-size="14px" class="css-1bmv740 eayjb5n2">
+                                        <span>Medical Gas Alarm System</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="https://e-katalog.lkpp.go.id/katalog/produk/detail/1265686?type=general&amp;utm_source=framed&amp;utm_campaign=167656-mezink&amp;utm_medium=affiliate&amp;utm_content=produk-dalam-negeri" target="_blank" rel="noreferrer" class="css-1f4dv5m">
+                                <div class="css-1fqugoq eayjb5n4">
+                                    <img alt="Automatic Changeover Manifold" src="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/catalog/productimage_cropper_1658223300939.jpg">
+                                    <div font-size="14px" class="css-1bmv740 eayjb5n2">
+                                        <span>Automatic Changeover Manifold</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="https://e-katalog.lkpp.go.id/katalog/produk/detail/1263796?type=general&amp;utm_source=framed&amp;utm_campaign=167656-mezink&amp;utm_medium=affiliate&amp;utm_content=produk-dalam-negeri" target="_blank" rel="noreferrer" class="css-1f4dv5m">
+                                <div class="css-1fqugoq eayjb5n4">
+                                    <img alt="FRES SISTEM MEDICAL AIR COMPRESSOR" src="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/catalog/productimage_cropper_1658223552813.jpg">
+                                    <div font-size="14px" class="css-1bmv740 eayjb5n2">
+                                        <span>FRES SISTEM MEDICAL AIR COMPRESSOR</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            
+                            <a href="https://e-katalog.lkpp.go.id/katalog/produk/detail/1264719?type=general&amp;utm_source=framed&amp;utm_campaign=167656-mezink&amp;utm_medium=affiliate&amp;utm_content=produk-dalam-negeri" target="_blank" rel="noreferrer" class="css-1f4dv5m">
+                                <div class="css-1fqugoq eayjb5n4">
+                                    <img alt="FRES SISTEM MEDICAL VACUUM PUMP VK 5,5 (5,5 KW)" src="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/catalog/productimage_cropper_1658223671027.jpg">
+                                    <div font-size="14px" class="css-1bmv740 eayjb5n2">
+                                        <span>FRES SISTEM MEDICAL VACUUM PUMP VK 5,5 (5,5 KW)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
+
+    
 </body>
 
 <script>
