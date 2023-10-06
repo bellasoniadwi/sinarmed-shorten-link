@@ -120,7 +120,7 @@
                     </a>
                 </div>
 
-                <div class="page-item-wrap relative">
+                {{-- <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
                     <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://pahsco.co.id/"
                         data-id="262840" data-type="page_item">
@@ -130,7 +130,8 @@
                                 <h2><span class="text-center">PAHSCO</span></h2>
                             </div>
                     </a>
-                </div>
+                </div> --}}
+                
                 <div class="page-item-wrap relative">
                     <div class="accordion">
                         <div class="accordion-item">
