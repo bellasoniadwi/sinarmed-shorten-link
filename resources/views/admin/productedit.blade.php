@@ -20,8 +20,8 @@
                         <div class="mb-3">
                             <label for="kategori_product" class="form-label">Kategori Product</label>
                             <select class="form-control" id="kategori_product" name="kategori_product" required>
-                                <option value="E-katalog" @if ($product->kategori_product == "E-katalog") selected @endif>E-katalog</option>
-                                <option value="Dalam Negeri" @if ($product->kategori_product == "Dalam Negeri") selected @endif>Dalam Negeri</option>
+                                <option value="AKL" @if ($product->kategori_product == "AKL") selected @endif>E-Katalog AKL</option>
+                                <option value="TKDN" @if ($product->kategori_product == "TKDN") selected @endif>E-Katalog TKDN</option>
                             </select>
                         </div>
                         <div class="mb-3">

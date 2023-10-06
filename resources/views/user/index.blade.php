@@ -138,13 +138,13 @@
                             <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
                                 alt="Katalog Sinarmed" />
                             <div class="accordion-content">
-                                @foreach ($ekatalog as $ek)
+                                @foreach ($akl as $a)
                                     <div class="page-item flex-both-center absolute"></div>
                                     <a target="_blank" class="page-item-each py-10 flex-both-center"
-                                        href="{{ $ek->link_product }}" data-id="261652" data-type="page_item">
-                                        <img class="link-each-image" data-src="{{ asset('storage/' . $ek->gambar_product) }}"
-                                            alt="{{ $ek->nama_product }}" />
-                                        <span class=" item-title text-center">{{ $ek->nama_product }}</span>
+                                        href="{{ $a->link_product }}" data-id="261652" data-type="page_item">
+                                        <img class="link-each-image" data-src="{{ asset('storage/' . $a->gambar_product) }}"
+                                            alt="{{ $a->nama_product }}" />
+                                        <span class=" item-title text-center">{{ $a->nama_product }}</span>
                                     </a>
                                 @endforeach
                             </div>
@@ -163,19 +163,15 @@
                                     </picture>
                                     <h2><span class="text-center">PRODUK DALAM NEGERI</span></h2>
                                 </div>
-                    
-                                {{-- <div color="#FFFFFF" class="css-y4awvf e1cu2qz0">
-                                    <h3>KHUSUS PRODUK AKD</h3>
-                                </div> --}}
                             </div>
                     
                             <div display="grid" class="css-37t1ki e1axnq4j3">
-                                @foreach ($dalamnegeri as $dn)
-                                    <a href="{{ $dn->link_product }}">
+                                @foreach ($tkdn as $t)
+                                    <a href="{{ $t->link_product }}">
                                         <div class="css-1fqugoq eayjb5n4">
-                                            <img alt="Medical Gas Alarm System" src="{{ asset('storage/' . $dn->gambar_product) }}">
+                                            <img alt="Medical Gas Alarm System" src="{{ asset('storage/' . $t->gambar_product) }}">
                                             <div font-size="14px" class="css-1bmv740 eayjb5n2">
-                                                <span>{{ $dn->nama_product }}</span>
+                                                <span>{{ $t->nama_product }}</span>
                                             </div>
                                         </div>
                                     </a>

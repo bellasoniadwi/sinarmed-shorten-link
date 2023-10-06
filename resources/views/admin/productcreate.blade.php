@@ -6,7 +6,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Form Tambah product Sinarmed</h5>
+            <h5 class="card-title fw-semibold mb-4">Form Tambah Product Sinarmed</h5>
             <div class="card">
                 <div class="card-body">
                     <form class="form-horizontal form-label-left input_mask" method="POST"
@@ -19,8 +19,8 @@
                         <div class="mb-3">
                             <label for="kategori_product" class="form-label">Kategori Product</label>
                             <select class="form-control" id="kategori_product" name="kategori_product" required>
-                                <option value="E-katalog">E-katalog</option>
-                                <option value="Dalam Negeri">Dalam Negeri</option>
+                                <option value="AKL">E-Katalog AKL</option>
+                                <option value="TKDN">E-Katalog TKDN</option>
                             </select>
                         </div>
                         <div class="mb-3">

@@ -9,8 +9,8 @@ class PublicController extends Controller
 {
     public function index()
     {
-        $ekatalog = Product::where('kategori_product', 'E-katalog')->get();
-        $dalamnegeri = Product::where('kategori_product', 'Dalam Negeri')->get();
-        return view('user.index', compact('ekatalog', 'dalamnegeri'));
+        $akl = Product::where('kategori_product', 'AKL')->get();
+        $tkdn = Product::where('kategori_product', 'TKDN')->get();
+        return view('user.index', compact('akl', 'tkdn'));
     }
 }
