@@ -64,7 +64,7 @@
                                             @endforeach
                                         </td>
                                         <td class="border-bottom-0 text-center">
-                                            {{ $p->kategori_product }}
+                                            E-Katalog {{ $p->kategori_product }}
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <span class="badge bg-success rounded-3 fw-semibold">
