@@ -154,12 +154,12 @@
                 </div>
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
-                    <a href="{{ route('user.galery') }}" class="arrow-button">
-                        <!-- Tombol panah -->
+                    <a href="{{ route('user.galery') }}" >
+                        {{-- <!-- Tombol panah -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
                             <path fill="currentColor" d="M7.293 1.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L8 3.414V12a1 1 0 1 1-2 0V3.414L1.293 7.707a1 1 0 1 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0z" />
-                        </svg>
-                    </a>
+                        </svg> --}}
+                    
                     <div class="css-x3hr8h">
                         <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;" class="css-1goyi81">
                             <div class="css-139awdm">
@@ -186,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                </a>
                 </div>
             </div>
         </div>
