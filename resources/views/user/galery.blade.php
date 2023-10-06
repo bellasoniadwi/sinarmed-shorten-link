@@ -94,72 +94,8 @@
 
             <div class="mt-24">
                 
-                <div class="page-item-wrap relative ">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840"
-                        data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
-                            alt="Whatsapp Sinarmed" />
-                            <div class="css-18dalow-p2">
-                                <h2><span class="text-center">WHATSAPP</span></h2>
-                            </div>
-                    </a>
-                
-            </div>
-
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.sinarmed.com/"
-                        data-id="261652" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
-                            alt="Website Sinarmed" />
-                            <div class="css-18dalow-p2">
-                                <h2><span class="text-center">SINARMED</span></h2>
-                            </div>
-                    </a>
-                </div>
-
-                {{-- <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://pahsco.co.id/"
-                        data-id="262840" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/pahsco.png') }}"
-                            alt="Pahsco" />
-                            <div class="css-18dalow-p2">
-                                <h2><span class="text-center">PAHSCO</span></h2>
-                            </div>
-                    </a>
-                </div> --}}
-                
-                <div class="page-item-wrap relative">
-                    <div class="accordion">
-                        <div class="accordion-item">
-                            <button class="accordion-btn">EKATALOG</button>
-                            <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
-                                alt="Katalog Sinarmed" />
-                            <div class="accordion-content">
-                                @foreach ($akl as $a)
-                                    <div class="page-item flex-both-center absolute"></div>
-                                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                                        href="{{ $a->link_product }}" data-id="261652" data-type="page_item">
-                                        <img class="link-each-image" data-src="{{ asset('storage/' . $a->gambar_product) }}"
-                                            alt="{{ $a->nama_product }}" />
-                                        <span class=" item-title text-center">{{ $a->nama_product }}</span>
-                                    </a>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a href="{{ route('user.galery') }}" class="arrow-button">
-                        <!-- Tombol panah -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
-                            <path fill="currentColor" d="M7.293 1.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L8 3.414V12a1 1 0 1 1-2 0V3.414L1.293 7.707a1 1 0 1 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0z" />
-                        </svg>
-                    </a>
                     <div class="css-x3hr8h">
                         <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;" class="css-1goyi81">
                             <div class="css-139awdm">
@@ -189,9 +125,12 @@
                     
                 </div>
             </div>
-        </div>
-    </div>
-
+            <div class="mt-24">
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center absolute"><a href="{{ route('user.index') }}" class="btn-back">Kembali</a></div>
+                        
+                </div>
+            </div>
 
 </body>
 

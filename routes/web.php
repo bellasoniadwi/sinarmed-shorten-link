@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/sinarmed', [PublicController::class, 'index'])->name('user.index');
+Route::get('/sinarmed-galery', [PublicController::class, 'galery'])->name('user.galery');
 Route::get('/contact/create', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 

@@ -13,4 +13,10 @@ class PublicController extends Controller
         $tkdn = Product::where('kategori_product', 'TKDN')->get();
         return view('user.index', compact('akl', 'tkdn'));
     }
+
+    public function galery()
+    {
+        $tkdn = Product::where('kategori_product', 'TKDN')->get();
+        return view('user.galery', compact('tkdn'));
+    }
 }

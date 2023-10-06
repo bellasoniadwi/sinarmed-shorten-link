@@ -1254,6 +1254,11 @@ body {
     word-break: break-word;
 }
 
+/* .css-18dalow h2 span::after {
+    content: "\25BC";
+    float: right;
+} */
+
 .css-18dalow-p2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2867,4 +2872,29 @@ ins[data-ad-status="unfilled"] {
 .share-swipe > .delete {
     right: -12px !important;
     background: 0 0 !important;
+}
+
+/* CSS button back halaman galery */
+/* Gaya dasar untuk tombol kembali */
+.btn-back {
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: #ffffff; /* Warna teks tombol */
+    padding: 10px 20px; /* Padding tombol (atas-bawah, kiri-kanan) */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut tombol menjadi agak melengkung */
+    cursor: pointer; /* Mengubah kursor saat mengarahkan ke tombol */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    font-size: 16px; /* Ukuran teks */
+    font-weight: bold; /* Ketebalan teks */
+}
+
+/* Hover state - efek saat mengarahkan kursor ke tombol */
+.btn-back:hover {
+    background-color: #0056b3; /* Warna latar belakang saat hover */
+}
+
+/* Fokus state - efek saat tombol mendapat fokus */
+.btn-back:focus {
+    outline: none; /* Menghilangkan outline (garis tepi) saat tombol mendapat fokus */
+    box-shadow: 0 0 5px #007bff; /* Efek bayangan saat fokus */
 }
