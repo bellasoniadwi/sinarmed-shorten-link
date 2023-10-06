@@ -93,7 +93,7 @@
             </div>
 
             <div class="mt-24">
-                
+
                 <div class="page-item-wrap relative ">
                     <div class="page-item flex-both-center absolute"></div>
                     <a target="_blank" class="page-item-each py-10 flex-both-center"
@@ -101,12 +101,12 @@
                         data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
                             alt="Whatsapp Sinarmed" />
-                            <div class="css-18dalow-p2">
-                                <h2><span class="text-center">WHATSAPP</span></h2>
-                            </div>
+                        <div class="css-18dalow-p2">
+                            <h2><span class="text-center">WHATSAPP</span></h2>
+                        </div>
                     </a>
-                
-            </div>
+
+                </div>
 
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
@@ -114,9 +114,9 @@
                         data-id="261652" data-type="page_item">
                         <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
                             alt="Website Sinarmed" />
-                            <div class="css-18dalow-p2">
-                                <h2><span class="text-center">SINARMED</span></h2>
-                            </div>
+                        <div class="css-18dalow-p2">
+                            <h2><span class="text-center">SINARMED</span></h2>
+                        </div>
                     </a>
                 </div>
 
@@ -131,7 +131,7 @@
                             </div>
                     </a>
                 </div> --}}
-                
+
                 <div class="page-item-wrap relative">
                     <div class="accordion">
                         <div class="accordion-item">
@@ -143,7 +143,8 @@
                                     <div class="page-item flex-both-center absolute"></div>
                                     <a target="_blank" class="page-item-each py-10 flex-both-center"
                                         href="{{ $a->link_product }}" data-id="261652" data-type="page_item">
-                                        <img class="link-each-image" data-src="{{ asset('storage/' . $a->gambar_product) }}"
+                                        <img class="link-each-image"
+                                            data-src="{{ asset('storage/' . $a->gambar_product) }}"
                                             alt="{{ $a->nama_product }}" />
                                         <span class=" item-title text-center">{{ $a->nama_product }}</span>
                                     </a>
@@ -154,29 +155,27 @@
                 </div>
                 <div class="page-item-wrap relative">
                     <div class="page-item flex-both-center absolute"></div>
-                    <a href="{{ route('user.galery') }}" >
-                        {{-- <!-- Tombol panah -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
-                            <path fill="currentColor" d="M7.293 1.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1-1.414 1.414L8 3.414V12a1 1 0 1 1-2 0V3.414L1.293 7.707a1 1 0 1 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0z" />
-                        </svg> --}}
-                    
                     <div class="css-x3hr8h">
-                        <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;" class="css-1goyi81">
+                        <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;"
+                            class="css-1goyi81">
                             <div class="css-139awdm">
-                                <div color="#FFFFFF" style="border-bottom: 1px solid #b2aeae" class="css-18dalow e1cu2qz1">
+                                <div color="#FFFFFF" style="border-bottom: 1px solid #b2aeae"
+                                    class="css-18dalow e1cu2qz1" href="{{ route('user.galery') }}">
                                     <picture visibility="visible" class="css-18ikrgg en27bju17">
-                                        <source srcset="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/icons/62d65be605b8766aa957eb1b">
+                                        <source
+                                            srcset="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/icons/62d65be605b8766aa957eb1b">
                                         <img visibility="visible" loading="lazy" class="css-1d3ess8 en27bju18">
                                     </picture>
-                                    <h2><span class="text-center">PRODUK DALAM NEGERI</span></h2>
+                                    <h2><a href="{{ route('user.galery') }}" ><span class="text-center">PRODUK DALAM NEGERI</span></a></h2>
                                 </div>
                             </div>
-                    
+
                             <div display="grid" class="css-37t1ki e1axnq4j3">
                                 @foreach ($tkdn as $t)
                                     <a href="{{ $t->link_product }}">
                                         <div class="css-1fqugoq eayjb5n4">
-                                            <img alt="Medical Gas Alarm System" src="{{ asset('storage/' . $t->gambar_product) }}">
+                                            <img alt="Medical Gas Alarm System"
+                                                src="{{ asset('storage/' . $t->gambar_product) }}">
                                             <div font-size="14px" class="css-1bmv740 eayjb5n2">
                                                 <span>{{ $t->nama_product }}</span>
                                             </div>
@@ -184,9 +183,8 @@
                                     </a>
                                 @endforeach
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
                 </div>
             </div>
         </div>
@@ -197,8 +195,8 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $(".accordion-btn").click(function () {
+    $(document).ready(function() {
+        $(".accordion-btn").click(function() {
             $(".accordion-content").slideToggle(); // Toggle the content
             $(this).toggleClass("active"); // Add or remove "active" class for styling
         });
@@ -212,7 +210,6 @@
     plausibleScript.setAttribute("defer", "");
     plausibleScript.setAttribute("data-domain", "bio.link");
     document.head.appendChild(plausibleScript);
-    
 </script>
 
 
