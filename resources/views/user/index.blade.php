@@ -135,7 +135,7 @@
                 <div class="page-item-wrap relative">
                     <div class="accordion">
                         <div class="accordion-item">
-                            <button class="accordion-btn">EKATALOG</button>
+                            <button class="accordion-btn">ALAT KESEHATAN LUAR</button>
                             <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
                                 alt="Katalog Sinarmed" />
                             <div class="accordion-content">
