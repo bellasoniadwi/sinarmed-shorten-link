@@ -130,7 +130,7 @@
                 
                 <div class="page-item-wrap relative">
                     
-                    <div class=" mt-24 page-item flex-both-center absolute"><a href="{{ route('user.index') }}" class="mt-24 btn-back">KEMBALI</a></div>
+                    <div class=" mt-24 page-item flex-both-center absolute"><a href="{{ route('user.index') }}" class="mt-24 btn-back">HALAMAN UTAMA</a></div>
                         
                 </div>
             </div>

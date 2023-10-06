@@ -2877,8 +2877,8 @@ ins[data-ad-status="unfilled"] {
 /* CSS button back halaman galery */
 /* Gaya dasar untuk tombol kembali */
 .btn-back {
-    background-color: #ffffff; /* Warna latar belakang tombol */
-    color: #b21f1f; /* Warna teks tombol */
+    background-color: #e52800; /* Warna latar belakang tombol */
+    color: #ffffff; /* Warna teks tombol */
     padding: 10px 20px; /* Padding tombol (atas-bawah, kiri-kanan) */
     border: none; /* Menghilangkan border */
     border-radius: 5px; /* Membuat sudut tombol menjadi agak melengkung */
@@ -2890,11 +2890,12 @@ ins[data-ad-status="unfilled"] {
 
 /* Hover state - efek saat mengarahkan kursor ke tombol */
 .btn-back:hover {
-    background-color: #d0d0d0; /* Warna latar belakang saat hover */
+    background-color: #ffffff; /* Warna latar belakang saat hover */
+    color: #8a1717;
 }
 
 /* Fokus state - efek saat tombol mendapat fokus */
 .btn-back:focus {
     outline: none; /* Menghilangkan outline (garis tepi) saat tombol mendapat fokus */
-    box-shadow: 0 0 5px #ff0000; /* Efek bayangan saat fokus */
+    box-shadow: 0 0 5px #ff2a00; /* Efek bayangan saat fokus */
 }
