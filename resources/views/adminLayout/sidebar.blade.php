@@ -29,12 +29,52 @@
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">UI COMPONENTS</span>
           </li>
-          <li class="sidebar-item @yield('product')">
-            <a class="sidebar-link" href="{{route('product.index')}}" aria-expanded="false">
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{{route('thumbnail-nonactive.index')}}" aria-expanded="false">
+              <span>
+                <i class="ti ti-typography"></i>
+              </span>
+              <span class="hide-menu">Thumbnail Non Aktif</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="ti ti-typography"></i>
+              </span>
+              <span class="hide-menu">Thumbnail Aktif</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#" aria-expanded="false">
               <span>
                 <i class="ti ti-article"></i>
               </span>
-              <span class="hide-menu">Product Sinarmed</span>
+              <span class="hide-menu">Thumbnail Group</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="ti ti-cards"></i>
+              </span>
+              <span class="hide-menu">Thumbnail Gallery</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="ti ti-aperture"></i>
+              </span>
+              <span class="hide-menu">Social Media</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="ti ti-file-description"></i>
+              </span>
+              <span class="hide-menu">Inbox</span>
             </a>
           </li>
           {{-- <li class="sidebar-item">

@@ -1,4 +1,4 @@
-<?php
+database/migrations/2023_09_30_070720_create_thumbnail_active_table.php<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('thumbnail_nonactive', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_product');
-            $table->string('link_product');
-            $table->string('gambar_product');
-            $table->string('kategori_product');
+            $table->string('judul_thumbnail');
+            $table->text('link_thumbnail');
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('thumbnail_nonactive');
     }
 };

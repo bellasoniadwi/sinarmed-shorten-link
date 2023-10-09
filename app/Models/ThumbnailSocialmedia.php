@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class ThumbnailSocialmedia extends Model
 {
     use HasFactory;
-    protected $table ='contacts';
+    protected $table ='thumbnail_socialmedia';
 
     protected $fillable =[
-        'nama',
-        'email',
-        'nomor_telepon',
+        'gambar_thumbnail',
+        'link_thumbnail',
     ];
 }

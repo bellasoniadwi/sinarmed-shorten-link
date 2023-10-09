@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ThumbnailNonactiveController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [HomeController::class, 'home'])->name('home');
     Route::resource('product', ProductController::class);
+    Route::resource('thumbnail-nonactive', ThumbnailNonactiveController::class);
 });
 
 

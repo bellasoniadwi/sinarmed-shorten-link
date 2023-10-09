@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\ThumbnailNonactive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use Throwable;
 
-class ProductController extends Controller
+class ThumbnailNonactiveController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $product = Product::orderBy('created_at', 'desc')->get();
-        return view('admin.productindex')->with('product', $product);
+        $nonactive = ThumbnailNonactive::orderBy('created_at', 'desc')->get();
+        return view('admin.nonactive.index')->with('nonactive', $nonactive);
     }
 
     /**
