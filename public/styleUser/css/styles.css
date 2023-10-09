@@ -345,6 +345,13 @@ html {
     position: relative;
 }
 
+.link-each-social {
+    width: 43px;
+    height: 43px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
 .link-each-image {
     width: 43px;
     height: 43px;
