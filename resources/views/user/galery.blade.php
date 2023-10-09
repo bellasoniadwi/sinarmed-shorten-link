@@ -6,7 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="shortcut icon" href="{{ asset('styleUser/style/sinarmed.png') }}" type="image/webp">
     <link rel="icon" href="{{ asset('styleUser/style/sinarmed.png') }}" type="image/webp">
-    <title>Sinarmed || Linktree</title>
+    <title>Sinarmed || Galery</title>
     <link rel="manifest" href="{{ asset('styleUser/style/manifest.json') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">

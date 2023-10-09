@@ -102,7 +102,7 @@
                 <div class="page-item-wrap relative">
                     <div class="accordion">
                         <div class="accordion-item">
-                            <button class="accordion-btn">EKATALOG</button>
+                            <button class="accordion-btn">ALAT KESEHATAN LUAR (PAHSCO) </button>
                             <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
                                 alt="Katalog Sinarmed" />
                             <div class="accordion-content">
@@ -154,6 +154,20 @@
                     </div>
                 </div>
             </div>
+            <div class="mt-48 page-full-wrap relative ">
+                <h3>
+                    
+                    <h2 class="page-title page-text-color page-text-font mt-16 text-center">
+                        &copy;2023 Copyright
+                        <a href="https://www.sinarmed.com/">
+                                <u>PT Sinarmed Jaya</u>
+                        </a>
+                         
+                    </h2>
+                </h3>
+                
+            </div>
+            
         </div>
     </div>
 
@@ -787,6 +801,6 @@
     })();
 </script>
 
-<script src="{{ asset('styleUser/style/snowfall.js') }}"></script>
+{{-- <script src="{{ asset('styleUser/style/snowfall.js') }}"></script> --}}
 
 </html>
