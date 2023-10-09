@@ -187,6 +187,20 @@
                     </div>
                 </div>
             </div>
+            <div class="mt-48 page-full-wrap relative ">
+                <h3>
+                    
+                    <h2 class="page-title page-text-color page-text-font mt-16 text-center">
+                        &copy;2023 Copyright
+                        <a href="https://www.sinarmed.com/">
+                                <u>PT Sinarmed Jaya</u>
+                        </a>
+                         
+                    </h2>
+                </h3>
+                
+            </div>
+            
         </div>
     </div>
 
@@ -820,6 +834,6 @@
     })();
 </script>
 
-<script src="{{ asset('styleUser/style/snowfall.js') }}"></script>
+{{-- <script src="{{ asset('styleUser/style/snowfall.js') }}"></script> --}}
 
 </html>
