@@ -2,7 +2,7 @@
 @section('title')
     Data Thumbnail Nonactive
 @endsection
-@section('product', 'active')
+@section('nonactive', 'active')
 @section('content')
     <div class="row">
         <div class="col-lg-12 d-flex align-items-stretch">
@@ -32,36 +32,49 @@
                                         <h6 class="fw-semibold mb-0">Link</h6>
                                     </th>
                                     <th class="border-bottom-0 text-center">
+                                        <h6 class="fw-semibold mb-0">Status</h6>
+                                    </th>
+                                    <th class="border-bottom-0 text-center">
                                         <h6 class="fw-semibold mb-0">Aksi</h6>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($nonactive as $index => $p)
+                                @foreach ($nonactive as $index => $n)
                                     <tr>
-
                                         <td class="border-bottom-0 text-center">
                                             <h6 class="fw-semibold mb-0">{{ $index + 1 }}</h6>
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             @php
-                                                $nama = $p->nama_product;
-                                                $namaChunks = str_split($nama, 60);
+                                                $judul = $n->judul_thumbnail;
+                                                $judulChunks = str_split($judul, 60);
                                             @endphp
-                                            @foreach ($namaChunks as $chunk)
+                                            @foreach ($judulChunks as $chunk)
                                                 {{ $chunk }}<br>
                                             @endforeach
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <span class="badge bg-success rounded-3 fw-semibold">
-                                                <a href="{{ $p->link_product }}" class="text-light font-weight-bold text-xs"
-                                                    data-toggle="tooltip" data-original-title="{{ $p->nama_product }}"
+                                                <a href="{{ $n->link_thumbnail }}" class="text-light font-weight-bold text-xs"
+                                                    data-toggle="tooltip" data-original-title="{{ $n->link_thumbnail }}"
                                                     target="_blank">Buka Link</a>
                                             </span>
                                         </td>
                                         <td class="border-bottom-0 text-center">
-                                            <a rel="noopener" href="{{ route('product.edit', $p->id) }}"
-                                                aria-label="Edit Product"><svg xmlns="http://www.w3.org/2000/svg"
+                                                @if ($n->is_active == true) 
+                                                <span class="badge bg-primary rounded-3 fw-semibold">
+                                                    Aktif
+                                                </span>
+                                                @else
+                                                <span class="badge bg-danger rounded-3 fw-semibold">
+                                                    Tidak Aktif
+                                                </span>
+                                                @endif
+                                        </td>                                        
+                                        <td class="border-bottom-0 text-center">
+                                            <a rel="noopener" href="{{ route('thumbnail-nonactive.edit', $n->id) }}"
+                                                aria-label="Edit Thumbnail Nonactive"><svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-edit-circle" width="24"
                                                     height="24" viewBox="0 0 24 24" stroke-width="2"
                                                     stroke="currentColor" fill="none" stroke-linecap="round"
@@ -73,8 +86,8 @@
                                                     <path d="M16 5l3 3"></path>
                                                     <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
                                                 </svg></a>
-                                            <a href="" aria-label="Delete Product" class="delete-product"
-                                                data-id="{{ $p->id }}">
+                                            <a href="" aria-label="Delete Thumbnail Nonactive" class="delete-thumbnail"
+                                                data-id="{{ $n->id }}">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-trash" width="24" height="24"
                                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -102,24 +115,24 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            const deleteButtons = document.querySelectorAll('.delete-product');
+            const deleteButtons = document.querySelectorAll('.delete-thumbnail');
 
             deleteButtons.forEach(button => {
                 button.addEventListener('click', function(event) {
                     event.preventDefault();
 
-                    const productId = this.getAttribute('data-id');
+                    const thumbnailId = this.getAttribute('data-id');
 
                     Swal.fire({
-                        title: 'Apakah Anda yakin ingin menghapus product ini?',
+                        title: 'Apakah Anda yakin ingin menghapus thumbnail ini?',
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Ya, hapus product!'
+                        confirmButtonText: 'Ya, hapus thumbnail!'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            fetch(`{{ route('product.destroy', '') }}/${productId}`, {
+                            fetch(`{{ route('thumbnail-nonactive.destroy', '') }}/${thumbnailId}`, {
                                     method: 'DELETE',
                                     headers: {
                                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -129,13 +142,13 @@
                                     if (response.ok) {
                                         Swal.fire({
                                             title: 'Deleted!',
-                                            text: 'Product berhasil dihapus.',
+                                            text: 'Thumbnail berhasil dihapus.',
                                             icon: 'success',
                                             showConfirmButton: false,
                                             timer: 1500
                                         })
                                     } else {
-                                        console.error('Gagal menghapus product');
+                                        console.error('Gagal menghapus thumbnail');
                                     }
                                     window.location.reload();
                                 })
