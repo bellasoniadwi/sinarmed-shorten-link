@@ -8,6 +8,7 @@ use App\Http\Controllers\ThumbnailActiveController;
 use App\Http\Controllers\ThumbnailGalleryController;
 use App\Http\Controllers\ThumbnailGroupController;
 use App\Http\Controllers\ThumbnailNonactiveController;
+use App\Http\Controllers\ThumbnailSocialmediaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('thumbnail-active', ThumbnailActiveController::class);
     Route::resource('thumbnail-group', ThumbnailGroupController::class);
     Route::resource('thumbnail-gallery', ThumbnailGalleryController::class);
+    Route::resource('thumbnail-socialmedia', ThumbnailSocialmediaController::class);
 });
 
 
