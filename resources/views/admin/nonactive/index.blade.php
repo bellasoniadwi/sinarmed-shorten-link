@@ -73,22 +73,24 @@
                                                 @endif
                                         </td>                                        
                                         <td class="border-bottom-0 text-center">
-                                            <a rel="noopener" href="{{ route('thumbnail-nonactive.edit', $n->id) }}"
-                                                aria-label="Edit Thumbnail Nonactive"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-edit-circle" width="24"
-                                                    height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path
-                                                        d="M12 15l8.385 -8.415a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3z">
-                                                    </path>
-                                                    <path d="M16 5l3 3"></path>
-                                                    <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
-                                                </svg></a>
-                                            <a href="" aria-label="Delete Thumbnail Nonactive" class="delete-thumbnail"
-                                                data-id="{{ $n->id }}">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                            <a aria-label="Edit Thumbnail Nonactive" href="{{ route('thumbnail-nonactive.edit', $n->id) }}"
+                                                class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-edit-circle" width="24"
+                                                height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                stroke="currentColor" fill="none" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                    d="M12 15l8.385 -8.415a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3z">
+                                                </path>
+                                                <path d="M16 5l3 3"></path>
+                                                <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
+                                            </svg></a>
+                                            <form action="{{ route('thumbnail-nonactive.destroy', $n->id) }}"
+                                                method="post">
+                                                @method('delete')
+                                                @csrf
+                                                <button aria-label="Hapus Thumbnail Active" class="btn btn-danger show_confirm" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-trash" width="24" height="24"
                                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -98,8 +100,8 @@
                                                     <path d="M14 11l0 6"></path>
                                                     <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
                                                     <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
-                                                </svg>
-                                            </a>
+                                                </svg></button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -114,51 +116,24 @@
 @section('js')
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            const deleteButtons = document.querySelectorAll('.delete-thumbnail');
-
-            deleteButtons.forEach(button => {
-                button.addEventListener('click', function(event) {
-                    event.preventDefault();
-
-                    const thumbnailId = this.getAttribute('data-id');
-
-                    Swal.fire({
-                        title: 'Apakah Anda yakin ingin menghapus thumbnail ini?',
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Ya, hapus thumbnail!'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            fetch(`{{ route('thumbnail-nonactive.destroy', '') }}/${thumbnailId}`, {
-                                    method: 'DELETE',
-                                    headers: {
-                                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                                    }
-                                })
-                                .then(function(response) {
-                                    if (response.ok) {
-                                        Swal.fire({
-                                            title: 'Deleted!',
-                                            text: 'Thumbnail berhasil dihapus.',
-                                            icon: 'success',
-                                            showConfirmButton: false,
-                                            timer: 1500
-                                        })
-                                    } else {
-                                        console.error('Gagal menghapus thumbnail');
-                                    }
-                                    window.location.reload();
-                                })
-                                .catch(function(error) {
-                                    console.error('Terjadi kesalahan:', error);
-                                });
-                        }
-                    });
+        $('.show_confirm').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Yakin ingin menghapus data?`,
+                    text: "Data ini akan terhapus permanen setelah anda menyetujui pesan ini",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        form.submit();
+                    } else {
+                        swal("Data Anda Aman!");
+                    }
                 });
-            });
         });
     </script>
 
