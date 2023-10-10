@@ -70,16 +70,22 @@
                                             </span>
                                         </td>
                                         <td class="border-bottom-0 text-center">
-                                                @if ($a->is_active == true) 
-                                                <span class="badge bg-primary rounded-3 fw-semibold">
-                                                    Aktif
-                                                </span>
-                                                @else
-                                                <span class="badge bg-danger rounded-3 fw-semibold">
-                                                    Tidak Aktif
-                                                </span>
-                                                @endif
-                                        </td>                                        
+                                            <form action="{{ route('thumbnail.updateActive', $a->id) }}"
+                                                method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-icons show_confirm_status">
+                                                    @if ($a->is_active == true)
+                                                        <span class="badge bg-primary rounded-3 fw-semibold">
+                                                            Aktif
+                                                        </span>
+                                                    @else
+                                                        <span class="badge bg-danger rounded-3 fw-semibold">
+                                                            Tidak Aktif
+                                                        </span>
+                                                    @endif
+                                                </button>
+                                            </form>
+                                        </td>
                                         <td class="border-bottom-0 text-center">
                                             <a aria-label="Edit Thumbnail Active" href="{{ route('thumbnail-active.edit', $a->id) }}"
                                                 class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg"
@@ -140,6 +146,26 @@
                         form.submit();
                     } else {
                         swal("Data Anda Aman!");
+                    }
+                });
+        });
+
+        $('.show_confirm_status').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Yakin ingin mengubah status thumbnail?`,
+                    text: "Thumbnail tidak aktif tidak akan ditampilkan sampai anda mengaktifkannya lagi",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        form.submit();
+                    } else {
+                        swal("Status thumbnail batal diubah");
                     }
                 });
         });

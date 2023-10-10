@@ -100,4 +100,19 @@ class ThumbnailSocialmediaController extends Controller
         Alert::success('Data thumbnail berhasil dihapus');
         return redirect()->route('thumbnail-socialmedia.index');
     }
+
+    public function updateStatus($id)
+    {
+        $socialmedia = ThumbnailSocialmedia::find($id);
+
+        if (!$socialmedia) {
+            return redirect()->route('thumbnail-socialmedia.index')->with('error', 'Data Thumbnail Social Media tidak ditemukan.');
+        }
+
+        $socialmedia->is_active = !$socialmedia->is_active;
+
+        $socialmedia->save();
+
+        return redirect()->route('thumbnail-socialmedia.index')->with('success', 'Status Thumbnail berhasil diubah.');
+    }
 }

@@ -36,6 +36,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('thumbnail-group', ThumbnailGroupController::class);
     Route::resource('thumbnail-gallery', ThumbnailGalleryController::class);
     Route::resource('thumbnail-socialmedia', ThumbnailSocialmediaController::class);
+
+    Route::post('thumbnail/updateNonactive/{id}', [ThumbnailNonactiveController::class, 'updateStatus'])->name('thumbnail.updateNonactive');
+    Route::post('thumbnail/updateActive/{id}', [ThumbnailActiveController::class, 'updateStatus'])->name('thumbnail.updateActive');
+    Route::post('thumbnail/updateGroup/{id}', [ThumbnailGroupController::class, 'updateStatus'])->name('thumbnail.updateGroup');
+    Route::post('thumbnail/updateGallery/{id}', [ThumbnailGalleryController::class, 'updateStatus'])->name('thumbnail.updateGallery');
+    Route::post('thumbnail/updateSocialmedia/{id}', [ThumbnailSocialmediaController::class, 'updateStatus'])->name('thumbnail.updateSocialmedia');
+
 });
 
 

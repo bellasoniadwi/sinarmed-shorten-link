@@ -14,7 +14,8 @@
                         </ul>
                         <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                                <a href="{{ route('thumbnail-socialmedia.create') }}" class="btn btn-danger">Tambah Thumbnail</a>
+                                <a href="{{ route('thumbnail-socialmedia.create') }}" class="btn btn-danger">Tambah
+                                    Thumbnail</a>
                             </ul>
                         </div>
                     </div>
@@ -40,63 +41,74 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($socialmedia as $index => $a)
+                                @foreach ($socialmedia as $index => $s)
                                     <tr>
                                         <td class="border-bottom-0 text-center">
                                             <h6 class="fw-semibold mb-0">{{ $index + 1 }}</h6>
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <img height="50px" width="50px"
-                                                src="{{ asset('storage/' . $a->gambar_thumbnail) }}"
+                                                src="{{ asset('storage/' . $s->gambar_thumbnail) }}"
                                                 alt="Thumbnail Social Media" />
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <span class="badge bg-success rounded-3 fw-semibold">
-                                                <a href="{{ $a->link_thumbnail }}" class="text-light font-weight-bold text-xs"
-                                                    data-toggle="tooltip" data-original-title="{{ $a->link_thumbnail }}"
-                                                    target="_blank">Buka Link</a>
+                                                <a href="{{ $s->link_thumbnail }}"
+                                                    class="text-light font-weight-bold text-xs" data-toggle="tooltip"
+                                                    data-original-title="{{ $s->link_thumbnail }}" target="_blank">Buka
+                                                    Link</a>
                                             </span>
                                         </td>
                                         <td class="border-bottom-0 text-center">
-                                                @if ($a->is_active == true) 
-                                                <span class="badge bg-primary rounded-3 fw-semibold">
-                                                    Aktif
-                                                </span>
-                                                @else
-                                                <span class="badge bg-danger rounded-3 fw-semibold">
-                                                    Tidak Aktif
-                                                </span>
-                                                @endif
-                                        </td>                                        
+                                            <form action="{{ route('thumbnail.updateSocialmedia', $s->id) }}"
+                                                method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-icons show_confirm_status">
+                                                    @if ($s->is_active == true)
+                                                        <span class="badge bg-primary rounded-3 fw-semibold">
+                                                            Aktif
+                                                        </span>
+                                                    @else
+                                                        <span class="badge bg-danger rounded-3 fw-semibold">
+                                                            Tidak Aktif
+                                                        </span>
+                                                    @endif
+                                                </button>
+                                            </form>
+                                        </td>
                                         <td class="border-bottom-0 text-center">
-                                            <a aria-label="Edit Thumbnail Social Media" href="{{ route('thumbnail-socialmedia.edit', $a->id) }}"
+                                            <a aria-label="Edit Thumbnail Social Media"
+                                                href="{{ route('thumbnail-socialmedia.edit', $s->id) }}"
                                                 class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg"
-                                                class="icon icon-tabler icon-tabler-edit-circle" width="24"
-                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <path
-                                                    d="M12 15l8.385 -8.415a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3z">
-                                                </path>
-                                                <path d="M16 5l3 3"></path>
-                                                <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
-                                            </svg></a>
-                                            <form action="{{ route('thumbnail-socialmedia.destroy', $a->id) }}"
+                                                    class="icon icon-tabler icon-tabler-edit-circle" width="24"
+                                                    height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                    stroke="currentColor" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path
+                                                        d="M12 15l8.385 -8.415a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3z">
+                                                    </path>
+                                                    <path d="M16 5l3 3"></path>
+                                                    <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
+                                                </svg></a>
+                                            <form action="{{ route('thumbnail-socialmedia.destroy', $s->id) }}"
                                                 method="post">
                                                 @method('delete')
                                                 @csrf
-                                                <button aria-label="Hapus Thumbnail Social Media" class="btn btn-danger show_confirm" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-trash" width="24" height="24"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M4 7l16 0"></path>
-                                                    <path d="M10 11l0 6"></path>
-                                                    <path d="M14 11l0 6"></path>
-                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
-                                                </svg></button>
+                                                <button aria-label="Hapus Thumbnail Social Media"
+                                                    class="btn btn-danger show_confirm" type="submit"><svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-trash" width="24"
+                                                        height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M4 7l16 0"></path>
+                                                        <path d="M10 11l0 6"></path>
+                                                        <path d="M14 11l0 6"></path>
+                                                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                                                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                                    </svg></button>
                                             </form>
                                         </td>
                                     </tr>
@@ -128,6 +140,26 @@
                         form.submit();
                     } else {
                         swal("Data Anda Aman!");
+                    }
+                });
+        });
+
+        $('.show_confirm_status').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Yakin ingin mengubah status thumbnail?`,
+                    text: "Thumbnail tidak aktif tidak akan ditampilkan sampai anda mengaktifkannya lagi",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        form.submit();
+                    } else {
+                        swal("Status thumbnail batal diubah");
                     }
                 });
         });

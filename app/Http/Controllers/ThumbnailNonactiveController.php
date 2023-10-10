@@ -91,4 +91,19 @@ class ThumbnailNonactiveController extends Controller
         Alert::success('Data thumbnail berhasil dihapus');
         return redirect()->route('thumbnail-nonactive.index');
     }
+
+    public function updateStatus($id)
+    {
+        $nonactive = ThumbnailNonactive::find($id);
+
+        if (!$nonactive) {
+            return redirect()->route('thumbnail-nonactive.index')->with('error', 'Data Thumbnail Nonactive tidak ditemukan.');
+        }
+
+        $nonactive->is_active = !$nonactive->is_active;
+
+        $nonactive->save();
+
+        return redirect()->route('thumbnail-nonactive.index')->with('success', 'Status Thumbnail berhasil diubah.');
+    }
 }

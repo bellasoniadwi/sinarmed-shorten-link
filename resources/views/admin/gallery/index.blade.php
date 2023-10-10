@@ -43,19 +43,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($gallery as $index => $a)
+                                @foreach ($gallery as $index => $g)
                                     <tr>
                                         <td class="border-bottom-0 text-center">
                                             <h6 class="fw-semibold mb-0">{{ $index + 1 }}</h6>
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <img height="50px" width="50px"
-                                                src="{{ asset('storage/' . $a->gambar_thumbnail) }}"
-                                                alt="{{ $a->judul_thumbnail }}" />
+                                                src="{{ asset('storage/' . $g->gambar_thumbnail) }}"
+                                                alt="{{ $g->judul_thumbnail }}" />
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             @php
-                                                $judul = $a->judul_thumbnail;
+                                                $judul = $g->judul_thumbnail;
                                                 $judulChunks = str_split($judul, 60);
                                             @endphp
                                             @foreach ($judulChunks as $chunk)
@@ -64,24 +64,30 @@
                                         </td>
                                         <td class="border-bottom-0 text-center">
                                             <span class="badge bg-success rounded-3 fw-semibold">
-                                                <a href="{{ $a->link_thumbnail }}" class="text-light font-weight-bold text-xs"
-                                                    data-toggle="tooltip" data-original-title="{{ $a->link_thumbnail }}"
+                                                <a href="{{ $g->link_thumbnail }}" class="text-light font-weight-bold text-xs"
+                                                    data-toggle="tooltip" data-original-title="{{ $g->link_thumbnail }}"
                                                     target="_blank">Buka Link</a>
                                             </span>
                                         </td>
                                         <td class="border-bottom-0 text-center">
-                                                @if ($a->is_active == true) 
-                                                <span class="badge bg-primary rounded-3 fw-semibold">
-                                                    Aktif
-                                                </span>
-                                                @else
-                                                <span class="badge bg-danger rounded-3 fw-semibold">
-                                                    Tidak Aktif
-                                                </span>
-                                                @endif
-                                        </td>                                        
+                                            <form action="{{ route('thumbnail.updateGallery', $g->id) }}"
+                                                method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-icons show_confirm_status">
+                                                    @if ($g->is_active == true)
+                                                        <span class="badge bg-primary rounded-3 fw-semibold">
+                                                            Aktif
+                                                        </span>
+                                                    @else
+                                                        <span class="badge bg-danger rounded-3 fw-semibold">
+                                                            Tidak Aktif
+                                                        </span>
+                                                    @endif
+                                                </button>
+                                            </form>
+                                        </td>
                                         <td class="border-bottom-0 text-center">
-                                            <a aria-label="Edit Thumbnail Gallery" href="{{ route('thumbnail-gallery.edit', $a->id) }}"
+                                            <a aria-label="Edit Thumbnail Gallery" href="{{ route('thumbnail-gallery.edit', $g->id) }}"
                                                 class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-edit-circle" width="24"
                                                 height="24" viewBox="0 0 24 24" stroke-width="2"
@@ -94,7 +100,7 @@
                                                 <path d="M16 5l3 3"></path>
                                                 <path d="M9 7.07a7 7 0 0 0 1 13.93a7 7 0 0 0 6.929 -6"></path>
                                             </svg></a>
-                                            <form action="{{ route('thumbnail-gallery.destroy', $a->id) }}"
+                                            <form action="{{ route('thumbnail-gallery.destroy', $g->id) }}"
                                                 method="post">
                                                 @method('delete')
                                                 @csrf
@@ -140,6 +146,26 @@
                         form.submit();
                     } else {
                         swal("Data Anda Aman!");
+                    }
+                });
+        });
+
+        $('.show_confirm_status').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Yakin ingin mengubah status thumbnail?`,
+                    text: "Thumbnail tidak aktif tidak akan ditampilkan sampai anda mengaktifkannya lagi",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        form.submit();
+                    } else {
+                        swal("Status thumbnail batal diubah");
                     }
                 });
         });

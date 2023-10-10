@@ -104,4 +104,19 @@ class ThumbnailActiveController extends Controller
         Alert::success('Data thumbnail berhasil dihapus');
         return redirect()->route('thumbnail-active.index');
     }
+
+    public function updateStatus($id)
+    {
+        $active = ThumbnailActive::find($id);
+
+        if (!$active) {
+            return redirect()->route('thumbnail-active.index')->with('error', 'Data Thumbnail Active tidak ditemukan.');
+        }
+
+        $active->is_active = !$active->is_active;
+
+        $active->save();
+
+        return redirect()->route('thumbnail-active.index')->with('success', 'Status Thumbnail berhasil diubah.');
+    }
 }

@@ -104,4 +104,19 @@ class ThumbnailGalleryController extends Controller
         Alert::success('Data thumbnail berhasil dihapus');
         return redirect()->route('thumbnail-gallery.index');
     }
+
+    public function updateStatus($id)
+    {
+        $gallery = ThumbnailGallery::find($id);
+
+        if (!$gallery) {
+            return redirect()->route('thumbnail-gallery.index')->with('error', 'Data Thumbnail Gallery tidak ditemukan.');
+        }
+
+        $gallery->is_active = !$gallery->is_active;
+
+        $gallery->save();
+
+        return redirect()->route('thumbnail-gallery.index')->with('success', 'Status Thumbnail berhasil diubah.');
+    }
 }

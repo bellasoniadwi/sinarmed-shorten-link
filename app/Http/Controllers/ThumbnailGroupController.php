@@ -104,4 +104,19 @@ class ThumbnailGroupController extends Controller
         Alert::success('Data thumbnail berhasil dihapus');
         return redirect()->route('thumbnail-group.index');
     }
+
+    public function updateStatus($id)
+    {
+        $group = ThumbnailGroup::find($id);
+
+        if (!$group) {
+            return redirect()->route('thumbnail-group.index')->with('error', 'Data Thumbnail Group tidak ditemukan.');
+        }
+
+        $group->is_active = !$group->is_active;
+
+        $group->save();
+
+        return redirect()->route('thumbnail-group.index')->with('success', 'Status Thumbnail berhasil diubah.');
+    }
 }
