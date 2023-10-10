@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ThumbnailActiveController;
+use App\Http\Controllers\ThumbnailGroupController;
 use App\Http\Controllers\ThumbnailNonactiveController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('product', ProductController::class);
     Route::resource('thumbnail-nonactive', ThumbnailNonactiveController::class);
     Route::resource('thumbnail-active', ThumbnailActiveController::class);
+    Route::resource('thumbnail-group', ThumbnailGroupController::class);
 });
 
 
