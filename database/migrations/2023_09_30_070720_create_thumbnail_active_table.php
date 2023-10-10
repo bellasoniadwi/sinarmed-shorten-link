@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('judul_thumbnail');
             $table->text('link_thumbnail');
             $table->string('gambar_thumbnail');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

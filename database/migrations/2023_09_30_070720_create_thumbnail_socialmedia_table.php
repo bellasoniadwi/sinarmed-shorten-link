@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('link_thumbnail');
             $table->string('gambar_thumbnail');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }
