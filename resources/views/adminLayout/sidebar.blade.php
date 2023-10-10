@@ -54,7 +54,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="#" aria-expanded="false">
+            <a class="sidebar-link" href="{{route('thumbnail-gallery.index')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-cards"></i>
               </span>
@@ -66,7 +66,7 @@
               <span>
                 <i class="ti ti-aperture"></i>
               </span>
-              <span class="hide-menu">Social Media</span>
+              <span class="hide-menu">Thumbnail Social Media</span>
             </a>
           </li>
           <li class="sidebar-item">
@@ -74,7 +74,7 @@
               <span>
                 <i class="ti ti-file-description"></i>
               </span>
-              <span class="hide-menu">Inbox</span>
+              <span class="hide-menu">Thumbnail Inbox</span>
             </a>
           </li>
           {{-- <li class="sidebar-item">
