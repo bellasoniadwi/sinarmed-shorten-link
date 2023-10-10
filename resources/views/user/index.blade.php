@@ -32,72 +32,44 @@
             </h3>
 
             <div class="flex-both-center flex-wrap mt-24">
+                @foreach ($socialmedia as $s)
                 <div class="page-social relative">
-                    <a target="_blank" rel="noopener" data-testid="SocialIcon"
-                        href="https://instagram.com/pt_sinarmedjaya" aria-label="PT Sinarmed Jaya instagram"
-                        class="sc-eCssSg lbrsth sc-kstrdz btjemE"><img class="link-each-social" data-src="{{ asset('styleUser/style/wa.png') }}"
-                        alt="Website Sinarmed" /></a>
+                    <a target="_blank" rel="noopener" data-testid="SocialIcon" href="{{ $s->link_thumbnail }}"
+                        aria-label="PT Sinarmed Jaya Social Media" class="sc-eCssSg lbrsth sc-kstrdz btjemE">
+                        <img class="link-each-social" data-src="{{ asset('storage/' . $s->gambar_thumbnail) }}"
+                        alt="Sinarmed Social Media" /></a>
                 </div>
-                <div class="page-social relative">
-                    <a target="_blank" rel="noopener" data-testid="SocialIcon"
-                        href="https://www.facebook.com/sinarmed.jaya?_rdc=2&amp;_rdr"
-                        aria-label="PT Sinarmed Jaya facebook" class="sc-eCssSg lbrsth sc-kstrdz btjemE"><img class="link-each-social" data-src="{{ asset('styleUser/style/wa.png') }}"
-                        alt="Website Sinarmed" /></a>
-                </div>
-                <div class="page-social relative">
-                    <a target="_blank" rel="noopener" data-testid="SocialIcon"
-                        href="https://www.youtube.com/channel/UCwlvBU1w44b3CbZ2nk4gRsg"
-                        aria-label="PT Sinarmed Jaya youtube" class="sc-eCssSg lbrsth sc-kstrdz btjemE">
-                        <img class="link-each-social" data-src="{{ asset('styleUser/style/wa.png') }}"
-                            alt="Website Sinarmed" /></a>
-                </div>
-
-                <div class="page-social relative">
-                    <a target="_blank" rel="noopener" data-testid="SocialIcon" href="mailto:info@sinarmed.com"
-                        aria-label="PT Sinarmed Jaya email address" class="sc-eCssSg lbrsth sc-kstrdz btjemE"><img class="link-each-social" data-src="{{ asset('styleUser/style/wa.png') }}"
-                        alt="Website Sinarmed" /></a>
-                </div>
+                @endforeach
             </div>
 
             <div class="mt-24">
-
-                <div class="page-item-wrap relative ">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center"
-                        href="https://api.whatsapp.com/send?phone=628113387053" data-id="262840"
-                        data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/wa.png') }}"
-                            alt="Whatsapp Sinarmed" />
-                        <div class="css-18dalow-p2">
-                            <h2><span class="text-center">WHATSAPP</span></h2>
-                        </div>
-                    </a>
-
-                </div>
-
-                <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.sinarmed.com/"
-                        data-id="261652" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleAdmin/images/logos/sinarmed.png') }}"
-                            alt="Website Sinarmed" />
-                        <div class="css-18dalow-p2">
-                            <h2><span class="text-center">SINARMED</span></h2>
-                        </div>
-                    </a>
-                </div>
-
-                {{-- <div class="page-item-wrap relative">
-                    <div class="page-item flex-both-center absolute"></div>
-                    <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://pahsco.co.id/"
-                        data-id="262840" data-type="page_item">
-                        <img class="link-each-image" data-src="{{ asset('styleUser/style/pahsco.png') }}"
-                            alt="Pahsco" />
+                @foreach ($nonactive as $n)
+                    <div class="page-item-wrap relative ">
+                        <div class="page-item flex-both-center absolute"></div>
+                        <a target="_blank" class="page-item-each py-10 flex-both-center"
+                            href="{{ $n->link_thumbnail }}" data-id="262840"
+                            data-type="page_item">
                             <div class="css-18dalow-p2">
-                                <h2><span class="text-center">PAHSCO</span></h2>
+                                <h2><span class="text-center">{{ $n->judul_thumbnail }}</span></h2>
                             </div>
-                    </a>
-                </div> --}}
+                        </a>
+                    </div>
+                @endforeach
+
+                @foreach ($active as $a)
+                    <div class="page-item-wrap relative ">
+                        <div class="page-item flex-both-center absolute"></div>
+                        <a target="_blank" class="page-item-each py-10 flex-both-center"
+                            href="{{ $a->link_thumbnail }}" data-id="262840"
+                            data-type="page_item">
+                            <img class="link-each-image" data-src="{{ asset('storage/' . $a->gambar_thumbnail) }}"
+                                alt="{{ $a->judul_thumbnail }}" />
+                            <div class="css-18dalow-p2">
+                                <h2><span class="text-center">{{ $a->judul_thumbnail }}</span></h2>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
 
                 <div class="page-item-wrap relative">
                     <div class="accordion">
@@ -106,14 +78,14 @@
                             <img class="link-each-image" data-src="{{ asset('styleUser/style/e-katalog.png') }}"
                                 alt="Katalog Sinarmed" />
                             <div class="accordion-content">
-                                @foreach ($akl as $a)
+                                @foreach ($group as $gr)
                                     <div class="page-item flex-both-center absolute"></div>
                                     <a target="_blank" class="page-item-each py-10 flex-both-center"
-                                        href="{{ $a->link_product }}" data-id="261652" data-type="page_item">
+                                        href="{{ $gr->link_thumbnail }}" data-id="261652" data-type="page_item">
                                         <img class="link-each-image"
-                                            data-src="{{ asset('storage/' . $a->gambar_product) }}"
-                                            alt="{{ $a->nama_product }}" />
-                                        <span class=" item-title text-center">{{ $a->nama_product }}</span>
+                                            data-src="{{ asset('storage/' . $gr->gambar_thumbnail) }}"
+                                            alt="{{ $gr->judul_thumbnail }}" />
+                                        <span class=" item-title text-center">{{ $gr->judul_thumbnail }}</span>
                                     </a>
                                 @endforeach
                             </div>
@@ -138,13 +110,13 @@
                             </div>
 
                             <div display="grid" class="css-37t1ki e1axnq4j3">
-                                @foreach ($tkdn as $t)
-                                    <a href="{{ $t->link_product }}">
+                                @foreach ($gallery as $ga)
+                                    <a href="{{ $ga->link_thumbnail }}">
                                         <div class="css-1fqugoq eayjb5n4">
-                                            <img alt="Medical Gas Alarm System"
-                                                src="{{ asset('storage/' . $t->gambar_product) }}">
+                                            <img alt="{{ $ga->judul_thumbnail }}"
+                                                src="{{ asset('storage/' . $ga->gambar_thumbnail) }}">
                                             <div font-size="14px" class="css-1bmv740 eayjb5n2">
-                                                <span>{{ $t->nama_product }}</span>
+                                                <span>{{ $ga->judul_thumbnail }}</span>
                                             </div>
                                         </div>
                                     </a>
