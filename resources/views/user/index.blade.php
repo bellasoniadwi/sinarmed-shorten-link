@@ -126,6 +126,68 @@
                     </div>
                 </div>
             </div>
+
+            <div class="page-item-wrap relative">
+                <div class="page-item flex-both-center absolute"></div>
+                <div class="css-x3hr8h">
+                    <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;"
+                        class="css-1goyi81">
+                        <div class="css-139awdm">
+                            <div color="#FFFFFF" style="border-bottom: 1px solid #b2aeae"
+                                class="css-18dalow e1cu2qz1" >
+                                <picture visibility="visible" class="css-18ikrgg en27bju17">
+                                    <source
+                                        srcset="{{ asset('styleUser/style/contact.png') }}">
+                                    <img visibility="visible" loading="lazy" class="css-1d3ess8 en27bju18">
+                                </picture>
+                                <h2><a><span class="text-center">HUBUNGI KAMI</span></a></h2>
+                            </div>
+                        </div>
+                        <div display="flex" color="#000000" class="css-a0jtnk en27bju14" open="">
+                            <div open="" class="css-2vlrzn en27bju13">
+                                <div class="css-bc505b en27bju11">
+                                    <div class="css-1x55z">
+                                        <div class="css-7uo5h9 egpyr882">
+                                            <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
+                                                <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                                    <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Nama" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="css-ft88bn en27bju7"></div>
+                                <div class="css-bc505b en27bju11">
+                                    <div class="css-1x55z">
+                                        <div class="css-7uo5h9 egpyr882">
+                                            <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
+                                                <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                                    <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Nomor Telepon" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="css-bc505b en27bju11">
+                                    <div class="css-1x55z">
+                                        <div class="css-7uo5h9 egpyr882">
+                                            <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #4f4d4d" background="" textcolor="">
+                                                <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                                    <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Pesan" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="css-seofv1 en27bju6"></p>
+                                </div> 
+                                <div class="css-4jany2">
+                                    <button width="200%" color="white" type="button" font-size="12px" style="border-color:inherit" class="css-w5ujzv e14chlxv0">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="mt-48 page-full-wrap relative ">
                 <h3>
                     
