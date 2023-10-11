@@ -25,7 +25,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/sinarmed', [PublicController::class, 'index'])->name('user.index');
 Route::get('/sinarmed-galery', [PublicController::class, 'galery'])->name('user.galery');
 Route::get('/contact/create', [ContactController::class, 'create'])->name('contact.create');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+// Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('thumbnail/inbox', [PublicController::class, 'inbox'])->name('thumbnail.inbox');
 
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
@@ -42,7 +43,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('thumbnail/updateGroup/{id}', [ThumbnailGroupController::class, 'updateStatus'])->name('thumbnail.updateGroup');
     Route::post('thumbnail/updateGallery/{id}', [ThumbnailGalleryController::class, 'updateStatus'])->name('thumbnail.updateGallery');
     Route::post('thumbnail/updateSocialmedia/{id}', [ThumbnailSocialmediaController::class, 'updateStatus'])->name('thumbnail.updateSocialmedia');
-
 });
 
 

@@ -7,7 +7,9 @@ use App\Models\ThumbnailGallery;
 use App\Models\ThumbnailGroup;
 use App\Models\ThumbnailNonactive;
 use App\Models\ThumbnailSocialmedia;
+use App\Models\ThumbnailInbox;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PublicController extends Controller
 {
@@ -25,5 +27,22 @@ class PublicController extends Controller
     {
         // $tkdn = Product::where('kategori_product', 'TKDN')->orderBy('created_at', 'desc')->get();
         // return view('user.galery', compact('tkdn'));
+    }
+
+    
+    public function inbox(Request $request){
+        $request->validate([
+            'nama' => 'required',
+            'telepon' => 'required',
+            'pesan' => 'required',
+        ]);
+        $inbox = new ThumbnailInbox();
+        $inbox->nama = $request->nama;
+        $inbox->telepon = $request->telepon;
+        $inbox->pesan = $request->pesan;
+        
+        $inbox->save();
+        Alert::success('Pesan anda telah diterima');
+        return redirect()->route('user.index');
     }
 }

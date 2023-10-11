@@ -131,10 +131,14 @@
 <div class="page-item-wrap relative">
     <div class="accordion">
         <div class="accordion-item">
+            
             <button class="accordion-btn-2">HUBUNGI KAMI </button>
             <img class="link-each-image" data-src="{{ asset('styleUser/style/contact.png') }}"
                 alt="Hubungi Sinarmed" />
             <div class="accordion-content-2">
+                <form class="form-horizontal form-label-left input_mask" method="POST"
+                    enctype="multipart/form-data" action="{{ route('thumbnail.inbox') }}">
+                    @csrf
                 <div display="flex" color="#000000" class="css-a0jtnk en27bju14" open="">
                     <div open="" class="css-2vlrzn en27bju13">
                         <div class="css-bc505b en27bju11">
@@ -142,7 +146,7 @@
                                 <div class="css-7uo5h9 egpyr882">
                                     <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
                                         <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
-                                            <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Nama" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                            <input type="text" aria-invalid="false" autocomplete="off" id="nama" placeholder="Nama" value="" class="form-control MuiInput-input MuiInputBase-input css-mnn31" name="nama" required>
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +158,7 @@
                                 <div class="css-7uo5h9 egpyr882">
                                     <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
                                         <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
-                                            <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Nomor Telepon" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                            <input type="text" aria-invalid="false" autocomplete="off" id="telepon" placeholder="Nomor Telepon" value="" class="form-control MuiInput-input MuiInputBase-input css-mnn31" name="telepon" required>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +169,7 @@
                                 <div class="css-7uo5h9 egpyr882">
                                     <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #4f4d4d" background="" textcolor="">
                                         <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
-                                            <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Pesan" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                            <input type="text" aria-invalid="false" autocomplete="off" id="pesan" placeholder="Pesan" value="" class="MuiInput-input MuiInputBase-input css-mnn31" name="pesan" required>
                                         </div>
                                     </div>
                                 </div>
@@ -173,10 +177,11 @@
                             <p class="css-seofv1 en27bju6"></p>
                         </div> 
                         <div class="css-4jany2">
-                            <button width="200%" color="white" type="button" font-size="12px" style="border-color:inherit" class="css-w5ujzv e14chlxv0">Submit</button>
+                            <button width="200%" color="white" type="submit" font-size="12px" style="border-color:inherit" class="css-w5ujzv e14chlxv0">Submit</button>
                         </div>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>
