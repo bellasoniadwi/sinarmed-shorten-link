@@ -4154,3 +4154,20 @@ body {
     background: #0f61a3;
     color: white;
 }
+
+.share-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.share-button svg {
+    width: 16px;
+    height: 16px;
+    fill: #000; /* Warna ikon tombol sesuaikan dengan preferensi Anda */
+    transition: fill 0.3s; /* Efek transisi saat menghover */
+}
+
+.share-button:hover svg {
+    fill: #007bff; /* Warna ikon tombol saat dihover */
+}

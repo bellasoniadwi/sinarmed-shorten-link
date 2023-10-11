@@ -43,7 +43,7 @@
             </div>
 
             <div class="mt-24">
-                @foreach ($nonactive as $n)
+                {{-- @foreach ($nonactive as $n)
                     <div class="page-item-wrap relative ">
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10 flex-both-center"
@@ -54,7 +54,27 @@
                             </div>
                         </a>
                     </div>
-                @endforeach
+                @endforeach --}}
+
+                @foreach ($nonactive as $n)
+<div class="page-item-wrap relative">
+    <div class="page-item flex-both-center absolute"></div>
+    <a target="_blank" class="page-item-each py-10 flex-both-center" href="{{ $n->link_thumbnail }}" data-id="262840"
+        data-type="page_item">
+        <div class="css-18dalow-p2">
+            <h2><span class="text-center">{{ $n->judul_thumbnail }}</span></h2>
+            <button class="share-button" data-clipboard-text="{{ $n->link_thumbnail }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                    <path d="M5.646 11.646a.5.5 0 0 1 0-.708l-1.5-1.5a.5.5 0 0 1 .708-.708L6.5 10.793l3.146-3.147a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 0 1 0-.708z" />
+                    <path d="M5.146 4.146a.5.5 0 0 1 .708 0l3.5 3.5a.5.5 0 0 1-.708.708L6.5 5.207 3.354 8.354a.5.5 0 0 1-.708-.708l3.5-3.5z" />
+                </svg>
+            </button>
+            
+        </div>
+    </a>
+</div>
+@endforeach
+
 
                 @foreach ($active as $a)
                     <div class="page-item-wrap relative ">
@@ -908,6 +928,23 @@
 
     // accordion form hubungi kami
     
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var clipboard = new ClipboardJS('.share-button');
+
+    clipboard.on('success', function (e) {
+        alert('Tautan berhasil disalin ke clipboard: ' + e.text);
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function (e) {
+        alert('Gagal menyalin tautan ke clipboard.');
+    });
+});
+
 </script>
 
 {{-- <script src="{{ asset('styleUser/style/snowfall.js') }}"></script> --}}
