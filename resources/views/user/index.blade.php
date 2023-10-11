@@ -131,10 +131,10 @@
 <div class="page-item-wrap relative">
     <div class="accordion">
         <div class="accordion-item">
-            <button class="accordion-btn">HUBUNGI KAMI </button>
+            <button class="accordion-btn-2">HUBUNGI KAMI </button>
             <img class="link-each-image" data-src="{{ asset('styleUser/style/contact.png') }}"
                 alt="Hubungi Sinarmed" />
-            <div class="accordion-content">
+            <div class="accordion-content-2">
                 <div display="flex" color="#000000" class="css-a0jtnk en27bju14" open="">
                     <div open="" class="css-2vlrzn en27bju13">
                         <div class="css-bc505b en27bju11">
@@ -271,6 +271,15 @@
     $(document).ready(function() {
         $(".accordion-btn").click(function() {
             $(".accordion-content").slideToggle(); // Toggle the content
+            $(this).toggleClass("active"); // Add or remove "active" class for styling
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $(".accordion-btn-2").click(function() {
+            $(".accordion-content-2").slideToggle(); // Toggle the content
             $(this).toggleClass("active"); // Add or remove "active" class for styling
         });
     });
