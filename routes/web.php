@@ -9,6 +9,7 @@ use App\Http\Controllers\ThumbnailGalleryController;
 use App\Http\Controllers\ThumbnailGroupController;
 use App\Http\Controllers\ThumbnailNonactiveController;
 use App\Http\Controllers\ThumbnailSocialmediaController;
+use App\Http\Controllers\ThumbnailInboxController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('thumbnail-group', ThumbnailGroupController::class);
     Route::resource('thumbnail-gallery', ThumbnailGalleryController::class);
     Route::resource('thumbnail-socialmedia', ThumbnailSocialmediaController::class);
+    Route::resource('thumbnail-inbox', ThumbnailInboxController::class);
 
     Route::post('thumbnail/updateNonactive/{id}', [ThumbnailNonactiveController::class, 'updateStatus'])->name('thumbnail.updateNonactive');
     Route::post('thumbnail/updateActive/{id}', [ThumbnailActiveController::class, 'updateStatus'])->name('thumbnail.updateActive');
