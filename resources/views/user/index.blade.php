@@ -127,7 +127,64 @@
                 </div>
             </div>
 
-            <div class="page-item-wrap relative">
+{{-- START-HUBUNGI KAMI --}}
+<div class="page-item-wrap relative">
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-btn">HUBUNGI KAMI </button>
+            <img class="link-each-image" data-src="{{ asset('styleUser/style/contact.png') }}"
+                alt="Hubungi Sinarmed" />
+            <div class="accordion-content">
+                <div display="flex" color="#000000" class="css-a0jtnk en27bju14" open="">
+                    <div open="" class="css-2vlrzn en27bju13">
+                        <div class="css-bc505b en27bju11">
+                            <div class="css-1x55z">
+                                <div class="css-7uo5h9 egpyr882">
+                                    <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
+                                        <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                            <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Nama" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css-ft88bn en27bju7"></div>
+                        <div class="css-bc505b en27bju11">
+                            <div class="css-1x55z">
+                                <div class="css-7uo5h9 egpyr882">
+                                    <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
+                                        <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                            <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Nomor Telepon" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css-bc505b en27bju11">
+                            <div class="css-1x55z">
+                                <div class="css-7uo5h9 egpyr882">
+                                    <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #4f4d4d" background="" textcolor="">
+                                        <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                            <input type="text" aria-invalid="false" autocomplete="off" id="outlined-basic" placeholder="Pesan" value="" class="MuiInput-input MuiInputBase-input css-mnn31">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="css-seofv1 en27bju6"></p>
+                        </div> 
+                        <div class="css-4jany2">
+                            <button width="200%" color="white" type="button" font-size="12px" style="border-color:inherit" class="css-w5ujzv e14chlxv0">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- END-HUBUNGI KAMI --}}
+            
+{{-- START-HUBUNGI KAMI --}}
+            {{-- <div class="page-item-wrap relative">
                 <div class="page-item flex-both-center absolute"></div>
                 <div class="css-x3hr8h">
                     <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;"
@@ -187,20 +244,21 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+{{-- END-HUBUNGI KAMI --}}
+
+{{-- START - FOOTER --}}
             <div class="mt-48 page-full-wrap relative ">
                 <h3>
-                    
                     <h2 class="page-title page-text-color page-text-font mt-16 text-center">
                         &copy;2023 Copyright
                         <a href="https://www.sinarmed.com/">
                                 <u>PT Sinarmed Jaya</u>
                         </a>
-                         
                     </h2>
                 </h3>
-                
             </div>
+{{-- END - FOOTER --}}
             
         </div>
     </div>
@@ -833,6 +891,9 @@
         var o = n.O(void 0, [432, 170], (() => n(328)));
         o = n.O(o)
     })();
+
+    // accordion form hubungi kami
+    
 </script>
 
 {{-- <script src="{{ asset('styleUser/style/snowfall.js') }}"></script> --}}
