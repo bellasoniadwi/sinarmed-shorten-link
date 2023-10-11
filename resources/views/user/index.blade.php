@@ -22,8 +22,8 @@
         <canvas id="bg-canvas" class="background-overlay"></canvas>
         <div class="mt-48 page-full-wrap relative ">
             <input type="hidden" value="creator-page" id="page-type">
-            <img class="display-image m-auto" data-src="{{ asset('styleUser/style/sinarmed-logo.png') }}"
-                alt="Sinarmed" width="300" height="300" />
+            <img class="display-image m-auto" data-src="{{ asset('styleUser/style/sinarmed-logo.png') }}" alt="Sinarmed"
+                width="300" height="300" />
             <h2 class="page-title page-text-color page-text-font mt-16 text-center">
                 PT Sinarmed Jaya
             </h2>
@@ -33,12 +33,12 @@
 
             <div class="flex-both-center flex-wrap mt-24">
                 @foreach ($socialmedia as $s)
-                <div class="page-social relative">
-                    <a target="_blank" rel="noopener" data-testid="SocialIcon" href="{{ $s->link_thumbnail }}"
-                        aria-label="PT Sinarmed Jaya Social Media" class="sc-eCssSg lbrsth sc-kstrdz btjemE">
-                        <img class="link-each-social" data-src="{{ asset('storage/' . $s->gambar_thumbnail) }}"
-                        alt="Sinarmed Social Media" /></a>
-                </div>
+                    <div class="page-social relative">
+                        <a target="_blank" rel="noopener" data-testid="SocialIcon" href="{{ $s->link_thumbnail }}"
+                            aria-label="PT Sinarmed Jaya Social Media" class="sc-eCssSg lbrsth sc-kstrdz btjemE">
+                            <img class="link-each-social" data-src="{{ asset('storage/' . $s->gambar_thumbnail) }}"
+                                alt="Sinarmed Social Media" /></a>
+                    </div>
                 @endforeach
             </div>
 
@@ -57,31 +57,28 @@
                 @endforeach --}}
 
                 @foreach ($nonactive as $n)
-<div class="page-item-wrap relative">
-    <div class="page-item flex-both-center absolute"></div>
-    <a target="_blank" class="page-item-each py-10 flex-both-center" href="{{ $n->link_thumbnail }}" data-id="262840"
-        data-type="page_item">
-        <div class="css-18dalow-p2">
-            <h2><span class="text-center">{{ $n->judul_thumbnail }}</span></h2>
-            <button class="share-button" data-clipboard-text="{{ $n->link_thumbnail }}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-                    <path d="M5.646 11.646a.5.5 0 0 1 0-.708l-1.5-1.5a.5.5 0 0 1 .708-.708L6.5 10.793l3.146-3.147a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 0 1 0-.708z" />
-                    <path d="M5.146 4.146a.5.5 0 0 1 .708 0l3.5 3.5a.5.5 0 0 1-.708.708L6.5 5.207 3.354 8.354a.5.5 0 0 1-.708-.708l3.5-3.5z" />
-                </svg>
-            </button>
-            
-        </div>
-    </a>
-</div>
-@endforeach
+                    <div class="page-item-wrap relative">
+                        <div class="page-item flex-both-center absolute"></div>
+                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="{{ $n->link_thumbnail }}"
+                            data-id="262840" data-type="page_item">
+                            <div class="css-18dalow-p2">
+                                <h2><span class="text-center">{{ $n->judul_thumbnail }}</span></h2>
+                                <button class="share-button" data-clipboard-text="{{ $n->link_thumbnail }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                                        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M40,0c-5.46484,0 -9.92187,4.39844 -10,9.84375c0,0.05078 0,0.10547 0,0.15625c0,3.6875 1.99609,6.89063 4.96875,8.625c1.47656,0.86328 3.19922,1.375 5.03125,1.375c5.51563,0 10,-4.48437 10,-10c0,-5.51562 -4.48437,-10 -10,-10zM28.0625,10.84375l-10.21875,5.125c2.37891,2.0625 3.94141,5.03125 4.125,8.375l10.34375,-5.1875c-2.41406,-2.02734 -4.01172,-4.98047 -4.25,-8.3125zM10,15c-5.51562,0 -10,4.48438 -10,10c0,5.51563 4.48438,10 10,10c2.05078,0 3.94141,-0.625 5.53125,-1.6875c2.68359,-1.79297 4.46875,-4.83984 4.46875,-8.3125c0,-3.58984 -1.91016,-6.73437 -4.75,-8.5c-1.53125,-0.95312 -3.32031,-1.5 -5.25,-1.5zM21.96875,25.65625c-0.18359,3.33984 -1.71875,6.33984 -4.09375,8.40625l10.1875,5.09375c0.23828,-3.33203 1.80859,-6.28125 4.21875,-8.3125zM40,30c-2.0625,0 -3.96875,0.64453 -5.5625,1.71875c-2.66797,1.79688 -4.4375,4.82422 -4.4375,8.28125c0,0.01563 0,0.01563 0,0.03125c-0.04297,0.00391 -0.08203,0.02734 -0.125,0.03125l0.125,0.0625c0.06641,5.45703 4.52734,9.875 10,9.875c5.51563,0 10,-4.48437 10,-10c0,-5.51562 -4.48437,-10 -10,-10z"></path></g></g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
 
 
                 @foreach ($active as $a)
                     <div class="page-item-wrap relative ">
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10 flex-both-center"
-                            href="{{ $a->link_thumbnail }}" data-id="262840"
-                            data-type="page_item">
+                            href="{{ $a->link_thumbnail }}" data-id="262840" data-type="page_item">
                             <img class="link-each-image" data-src="{{ asset('storage/' . $a->gambar_thumbnail) }}"
                                 alt="{{ $a->judul_thumbnail }}" />
                             <div class="css-18dalow-p2">
@@ -125,7 +122,8 @@
                                             srcset="https://super-content.s3-ap-southeast-1.amazonaws.com/users/98269/icons/62d65be605b8766aa957eb1b">
                                         <img visibility="visible" loading="lazy" class="css-1d3ess8 en27bju18">
                                     </picture>
-                                    <h2><a href="{{ route('user.galery') }}" ><span class="text-center">PRODUK DALAM NEGERI</span></a></h2>
+                                    <h2><a href="{{ route('user.galery') }}"><span class="text-center">PRODUK DALAM
+                                                NEGERI</span></a></h2>
                                 </div>
                             </div>
 
@@ -142,74 +140,100 @@
                                     </a>
                                 @endforeach
                             </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-{{-- START-HUBUNGI KAMI --}}
-<div class="page-item-wrap relative">
-    <div class="accordion">
-        <div class="accordion-item">
-            
-            <button class="accordion-btn-2">HUBUNGI KAMI </button>
-            <img class="link-each-image" data-src="{{ asset('styleUser/style/contact.png') }}"
-                alt="Hubungi Sinarmed" />
-            <div class="accordion-content-2">
-                <form class="form-horizontal form-label-left input_mask" method="POST"
-                    enctype="multipart/form-data" action="{{ route('thumbnail.inbox') }}">
-                    @csrf
-                <div display="flex" color="#000000" class="css-a0jtnk en27bju14" open="">
-                    <div open="" class="css-2vlrzn en27bju13">
-                        <div class="css-bc505b en27bju11">
-                            <div class="css-1x55z">
-                                <div class="css-7uo5h9 egpyr882">
-                                    <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
-                                        <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
-                                            <input type="text" aria-invalid="false" autocomplete="off" id="nama" placeholder="Nama" value="" class="form-control MuiInput-input MuiInputBase-input css-mnn31" name="nama" required>
+                {{-- START-HUBUNGI KAMI --}}
+                <div class="page-item-wrap relative">
+                    <div class="accordion">
+                        <div class="accordion-item">
+
+                            <button class="accordion-btn-2">HUBUNGI KAMI </button>
+                            <img class="link-each-image" data-src="{{ asset('styleUser/style/contact.png') }}"
+                                alt="Hubungi Sinarmed" />
+                            <div class="accordion-content-2">
+                                <form class="form-horizontal form-label-left input_mask" method="POST"
+                                    enctype="multipart/form-data" action="{{ route('thumbnail.inbox') }}">
+                                    @csrf
+                                    <div display="flex" color="#000000" class="css-a0jtnk en27bju14" open="">
+                                        <div open="" class="css-2vlrzn en27bju13">
+                                            <div class="css-bc505b en27bju11">
+                                                <div class="css-1x55z">
+                                                    <div class="css-7uo5h9 egpyr882">
+                                                        <div class="MuiFormControl-root MuiTextField-root css-1tic"
+                                                            height="48px"
+                                                            style="background-color:white;border:1px solid #AAAAAA"
+                                                            background="" textcolor="">
+                                                            <div
+                                                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                                                <input type="text" aria-invalid="false"
+                                                                    autocomplete="off" id="nama"
+                                                                    placeholder="Nama" value=""
+                                                                    class="form-control MuiInput-input MuiInputBase-input css-mnn31"
+                                                                    name="nama" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-ft88bn en27bju7"></div>
+                                            <div class="css-bc505b en27bju11">
+                                                <div class="css-1x55z">
+                                                    <div class="css-7uo5h9 egpyr882">
+                                                        <div class="MuiFormControl-root MuiTextField-root css-1tic"
+                                                            height="48px"
+                                                            style="background-color:white;border:1px solid #AAAAAA"
+                                                            background="" textcolor="">
+                                                            <div
+                                                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                                                <input type="text" aria-invalid="false"
+                                                                    autocomplete="off" id="telepon"
+                                                                    placeholder="Nomor Telepon" value=""
+                                                                    class="form-control MuiInput-input MuiInputBase-input css-mnn31"
+                                                                    name="telepon" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-bc505b en27bju11">
+                                                <div class="css-1x55z">
+                                                    <div class="css-7uo5h9 egpyr882">
+                                                        <div class="MuiFormControl-root MuiTextField-root css-1tic"
+                                                            height="48px"
+                                                            style="background-color:white;border:1px solid #4f4d4d"
+                                                            background="" textcolor="">
+                                                            <div
+                                                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
+                                                                <input type="text" aria-invalid="false"
+                                                                    autocomplete="off" id="pesan"
+                                                                    placeholder="Pesan" value=""
+                                                                    class="MuiInput-input MuiInputBase-input css-mnn31"
+                                                                    name="pesan" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="css-seofv1 en27bju6"></p>
+                                            </div>
+                                            <div class="css-4jany2">
+                                                <button width="200%" color="white" type="submit"
+                                                    font-size="12px" style="border-color:inherit"
+                                                    class="css-w5ujzv e14chlxv0">Submit</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
-                        </div>
-                        <div class="css-ft88bn en27bju7"></div>
-                        <div class="css-bc505b en27bju11">
-                            <div class="css-1x55z">
-                                <div class="css-7uo5h9 egpyr882">
-                                    <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #AAAAAA" background="" textcolor="">
-                                        <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
-                                            <input type="text" aria-invalid="false" autocomplete="off" id="telepon" placeholder="Nomor Telepon" value="" class="form-control MuiInput-input MuiInputBase-input css-mnn31" name="telepon" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="css-bc505b en27bju11">
-                            <div class="css-1x55z">
-                                <div class="css-7uo5h9 egpyr882">
-                                    <div class="MuiFormControl-root MuiTextField-root css-1tic" height="48px" style="background-color:white;border:1px solid #4f4d4d" background="" textcolor="">
-                                        <div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-2go6t7">
-                                            <input type="text" aria-invalid="false" autocomplete="off" id="pesan" placeholder="Pesan" value="" class="MuiInput-input MuiInputBase-input css-mnn31" name="pesan" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="css-seofv1 en27bju6"></p>
-                        </div> 
-                        <div class="css-4jany2">
-                            <button width="200%" color="white" type="submit" font-size="12px" style="border-color:inherit" class="css-w5ujzv e14chlxv0">Submit</button>
                         </div>
                     </div>
                 </div>
-            </form>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- END-HUBUNGI KAMI --}}
-            
-{{-- START-HUBUNGI KAMI --}}
-            {{-- <div class="page-item-wrap relative">
+                {{-- END-HUBUNGI KAMI --}}
+
+                {{-- START-HUBUNGI KAMI --}}
+                {{-- <div class="page-item-wrap relative">
                 <div class="page-item flex-both-center absolute"></div>
                 <div class="css-x3hr8h">
                     <div style="border-radius: 8px; border: 0.5px solid #FFFFFF; background-color: #FFFFFF;"
@@ -270,23 +294,23 @@
                     </div>
                 </div>
             </div> --}}
-{{-- END-HUBUNGI KAMI --}}
+                {{-- END-HUBUNGI KAMI --}}
 
-{{-- START - FOOTER --}}
-            <div class="mt-48 page-full-wrap relative ">
-                <h3>
-                    <h2 class="page-title page-text-color page-text-font mt-16 text-center">
-                        &copy;2023 Copyright
-                        <a href="https://www.sinarmed.com/">
+                {{-- START - FOOTER --}}
+                <div class="mt-48 page-full-wrap relative ">
+                    <h3>
+                        <h2 class="page-title page-text-color page-text-font mt-16 text-center">
+                            &copy;2023 Copyright
+                            <a href="https://www.sinarmed.com/">
                                 <u>PT Sinarmed Jaya</u>
-                        </a>
-                    </h2>
-                </h3>
+                            </a>
+                        </h2>
+                    </h3>
+                </div>
+                {{-- END - FOOTER --}}
+
             </div>
-{{-- END - FOOTER --}}
-            
         </div>
-    </div>
 
 
 </body>
@@ -927,24 +951,29 @@
     })();
 
     // accordion form hubungi kami
-    
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    var clipboard = new ClipboardJS('.share-button');
+    document.addEventListener('DOMContentLoaded', function() {
+        var clipboard = new ClipboardJS('.share-button');
 
-    clipboard.on('success', function (e) {
-        alert('Tautan berhasil disalin ke clipboard: ' + e.text);
-        e.clearSelection();
+        clipboard.on('success', function(e) {
+            alert('Tautan berhasil disalin ke clipboard: ' + e.text);
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function(e) {
+            alert('Gagal menyalin tautan ke clipboard.');
+        });
+
+        // Menghentikan peristiwa click pada elemen dengan kelas 'share-button'
+        document.querySelectorAll('.share-button').forEach(function(shareButton) {
+            shareButton.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+        });
     });
-
-    clipboard.on('error', function (e) {
-        alert('Gagal menyalin tautan ke clipboard.');
-    });
-});
-
 </script>
 
 {{-- <script src="{{ asset('styleUser/style/snowfall.js') }}"></script> --}}
