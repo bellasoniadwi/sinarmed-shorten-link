@@ -25,8 +25,9 @@ class PublicController extends Controller
 
     public function galery()
     {
-        // $tkdn = Product::where('kategori_product', 'TKDN')->orderBy('created_at', 'desc')->get();
-        // return view('user.galery', compact('tkdn'));
+        $gallery = ThumbnailGallery::where('is_active', true)->orderBy('created_at', 'desc')->get();
+        $socialmedia = ThumbnailSocialmedia::where('is_active', true)->get();
+        return view('user.galery', compact('socialmedia', 'gallery'));
     }
 
     
